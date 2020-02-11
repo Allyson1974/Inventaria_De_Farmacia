@@ -51,6 +51,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::InventarioFarmacia.Properties.Resources.seguridad;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 45);
             this.pictureBox1.Name = "pictureBox1";
@@ -113,6 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(495, 277);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox1);
