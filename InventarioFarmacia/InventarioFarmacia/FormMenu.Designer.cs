@@ -69,6 +69,7 @@
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Name = "ingresoSalidaDeMedicamentosToolStripMenuItem";
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Text = "Ingreso-Salida-De-Medicamentos";
+            this.ingresoSalidaDeMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.ingresoSalidaDeMedicamentosToolStripMenuItem_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
