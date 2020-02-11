@@ -21,5 +21,10 @@ namespace InventarioFarmacia
         {
 
         }
+
+        private void ingresoSalidaDeMedicamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
