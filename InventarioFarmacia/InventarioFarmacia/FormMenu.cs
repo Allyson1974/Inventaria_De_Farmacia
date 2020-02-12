@@ -19,7 +19,8 @@ namespace InventarioFarmacia
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-
+            var formlogin = new FormLogin();
+            formlogin.ShowDialog();
         }
 
         private void ingresoSalidaDeMedicamentosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,7 +30,24 @@ namespace InventarioFarmacia
 
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            var formproveedores = new FormProveedores();
+            formproveedores.ShowDialog();
+        }
+
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var forminventario = new FormInventario();
+            forminventario.ShowDialog();
+        }
+
+        private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

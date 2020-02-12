@@ -65,26 +65,27 @@
             this.salidaDeMedicamentosToolStripMenuItem,
             this.trasladoDeMedicamentosToolStripMenuItem});
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
-            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.transaccionesToolStripMenuItem.Text = "Transacciones";
+            this.transaccionesToolStripMenuItem.Click += new System.EventHandler(this.transaccionesToolStripMenuItem_Click);
             // 
             // ingresoSalidaDeMedicamentosToolStripMenuItem
             // 
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Name = "ingresoSalidaDeMedicamentosToolStripMenuItem";
-            this.ingresoSalidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.ingresoSalidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Text = "Ingreso De Medicamentos";
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.ingresoSalidaDeMedicamentosToolStripMenuItem_Click);
             // 
             // salidaDeMedicamentosToolStripMenuItem
             // 
             this.salidaDeMedicamentosToolStripMenuItem.Name = "salidaDeMedicamentosToolStripMenuItem";
-            this.salidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.salidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.salidaDeMedicamentosToolStripMenuItem.Text = "Salida De Medicamentos";
             // 
             // trasladoDeMedicamentosToolStripMenuItem
             // 
             this.trasladoDeMedicamentosToolStripMenuItem.Name = "trasladoDeMedicamentosToolStripMenuItem";
-            this.trasladoDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.trasladoDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.trasladoDeMedicamentosToolStripMenuItem.Text = "Traslado De Medicamentos";
             // 
             // mantenimientoToolStripMenuItem
@@ -108,6 +109,7 @@
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
             this.productoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productoToolStripMenuItem.Text = "Producto";
+            this.productoToolStripMenuItem.Click += new System.EventHandler(this.productoToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -122,20 +124,20 @@
             // reporte1ToolStripMenuItem
             // 
             this.reporte1ToolStripMenuItem.Name = "reporte1ToolStripMenuItem";
-            this.reporte1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.reporte1ToolStripMenuItem.Text = "Reporte-1";
+            this.reporte1ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.reporte1ToolStripMenuItem.Text = "Reporte de Gastos";
             // 
             // reporte2ToolStripMenuItem
             // 
             this.reporte2ToolStripMenuItem.Name = "reporte2ToolStripMenuItem";
-            this.reporte2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.reporte2ToolStripMenuItem.Text = "Reporte-2";
+            this.reporte2ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.reporte2ToolStripMenuItem.Text = "Reportes de Ingresos";
             // 
             // reporte3ToolStripMenuItem
             // 
             this.reporte3ToolStripMenuItem.Name = "reporte3ToolStripMenuItem";
-            this.reporte3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.reporte3ToolStripMenuItem.Text = "Reporte-3";
+            this.reporte3ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.reporte3ToolStripMenuItem.Text = "Reporte de inventario";
             // 
             // seguridadToolStripMenuItem
             // 
@@ -148,8 +150,9 @@
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.perfilesToolStripMenuItem.Text = "Log out";
+            this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
