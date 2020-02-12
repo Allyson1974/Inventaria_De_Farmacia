@@ -51,7 +51,12 @@ namespace InventarioFarmacia
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
