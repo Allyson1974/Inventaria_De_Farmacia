@@ -21,5 +21,14 @@ namespace InventarioFarmacia
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           // if (usuario == "admin" && contraseña == "1234")
+         //   {
+
+
+        //    }
+        }
     }
 }
