@@ -31,6 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresoSalidaDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salidaDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trasladoDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,8 +42,6 @@
             this.reporte3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salidaDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trasladoDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,18 @@
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Text = "Ingreso De Medicamentos";
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.ingresoSalidaDeMedicamentosToolStripMenuItem_Click);
             // 
+            // salidaDeMedicamentosToolStripMenuItem
+            // 
+            this.salidaDeMedicamentosToolStripMenuItem.Name = "salidaDeMedicamentosToolStripMenuItem";
+            this.salidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.salidaDeMedicamentosToolStripMenuItem.Text = "Salida De Medicamentos";
+            // 
+            // trasladoDeMedicamentosToolStripMenuItem
+            // 
+            this.trasladoDeMedicamentosToolStripMenuItem.Name = "trasladoDeMedicamentosToolStripMenuItem";
+            this.trasladoDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.trasladoDeMedicamentosToolStripMenuItem.Text = "Traslado De Medicamentos";
+            // 
             // mantenimientoToolStripMenuItem
             // 
             this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -89,6 +101,7 @@
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
             this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // productoToolStripMenuItem
             // 
@@ -135,20 +148,8 @@
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.perfilesToolStripMenuItem.Text = "Log out";
-            // 
-            // salidaDeMedicamentosToolStripMenuItem
-            // 
-            this.salidaDeMedicamentosToolStripMenuItem.Name = "salidaDeMedicamentosToolStripMenuItem";
-            this.salidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.salidaDeMedicamentosToolStripMenuItem.Text = "Salida De Medicamentos";
-            // 
-            // trasladoDeMedicamentosToolStripMenuItem
-            // 
-            this.trasladoDeMedicamentosToolStripMenuItem.Name = "trasladoDeMedicamentosToolStripMenuItem";
-            this.trasladoDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.trasladoDeMedicamentosToolStripMenuItem.Text = "Traslado De Medicamentos";
             // 
             // FormMenu
             // 

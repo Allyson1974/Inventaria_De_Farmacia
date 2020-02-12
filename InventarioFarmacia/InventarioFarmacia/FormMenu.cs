@@ -26,5 +26,10 @@ namespace InventarioFarmacia
         {
 
         }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
