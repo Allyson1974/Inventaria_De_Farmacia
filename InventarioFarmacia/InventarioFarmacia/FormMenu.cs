@@ -49,5 +49,10 @@ namespace InventarioFarmacia
         {
             this.Close();
         }
+
+        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

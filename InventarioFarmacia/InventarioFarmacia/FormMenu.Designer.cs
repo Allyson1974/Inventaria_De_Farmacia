@@ -65,27 +65,27 @@
             this.salidaDeMedicamentosToolStripMenuItem,
             this.trasladoDeMedicamentosToolStripMenuItem});
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
-            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.transaccionesToolStripMenuItem.Text = "Transacciones";
             this.transaccionesToolStripMenuItem.Click += new System.EventHandler(this.transaccionesToolStripMenuItem_Click);
             // 
             // ingresoSalidaDeMedicamentosToolStripMenuItem
             // 
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Name = "ingresoSalidaDeMedicamentosToolStripMenuItem";
-            this.ingresoSalidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.ingresoSalidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Text = "Ingreso De Medicamentos";
             this.ingresoSalidaDeMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.ingresoSalidaDeMedicamentosToolStripMenuItem_Click);
             // 
             // salidaDeMedicamentosToolStripMenuItem
             // 
             this.salidaDeMedicamentosToolStripMenuItem.Name = "salidaDeMedicamentosToolStripMenuItem";
-            this.salidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.salidaDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.salidaDeMedicamentosToolStripMenuItem.Text = "Salida De Medicamentos";
             // 
             // trasladoDeMedicamentosToolStripMenuItem
             // 
             this.trasladoDeMedicamentosToolStripMenuItem.Name = "trasladoDeMedicamentosToolStripMenuItem";
-            this.trasladoDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.trasladoDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.trasladoDeMedicamentosToolStripMenuItem.Text = "Traslado De Medicamentos";
             // 
             // mantenimientoToolStripMenuItem
@@ -96,6 +96,7 @@
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
@@ -150,7 +151,7 @@
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.perfilesToolStripMenuItem.Text = "Log out";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
             // 
