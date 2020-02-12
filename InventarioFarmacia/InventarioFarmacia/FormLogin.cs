@@ -24,11 +24,31 @@ namespace InventarioFarmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // if (usuario == "admin" && contraseña == "1234")
-         //   {
+            string usuario1, usuario2;
+            string contrasena1, contrasena2;
+
+            usuario1 = textBox1.Text;
+            contrasena1 = textBox2.Text;
+            usuario2 = textBox1.Text;
+            contrasena2 = textBox2.Text;
 
 
-        //    }
+            if (usuario1 == "admin" && contrasena1 == "1234")
+            {
+                MessageBox.Show("!!!Bienvenido!!!");
+                this.Close();
+                }
+            else if (usuario2 == "administrator" && contrasena2 == "4567")
+            {
+                MessageBox.Show("!!!Bienvenido!!!");
+                this.Close();
+            }
+            else
+                {
+                    MessageBox.Show("Usuario o Contrasena incorrecta");
+                }
         }
+
+        
     }
 }
