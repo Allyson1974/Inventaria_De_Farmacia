@@ -81,6 +81,14 @@
             this.textBox46 = new System.Windows.Forms.TextBox();
             this.textBox47 = new System.Windows.Forms.TextBox();
             this.textBox48 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cajas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,9 +97,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(47, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(373, 24);
+            this.label1.Size = new System.Drawing.Size(381, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Inventario de Productos de La farmacia";
+            this.label1.Text = "Inventario de Productos de La Farmacia";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -470,11 +479,65 @@
             this.textBox48.Size = new System.Drawing.Size(75, 20);
             this.textBox48.TabIndex = 2;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Producto,
+            this.Descripcion,
+            this.Unidades,
+            this.Cajas});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 422);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(444, 111);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // Unidades
+            // 
+            this.Unidades.HeaderText = "Unidades";
+            this.Unidades.Name = "Unidades";
+            // 
+            // Cajas
+            // 
+            this.Cajas.HeaderText = "Cajas";
+            this.Cajas.Name = "Cajas";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(467, 422);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 49);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(467, 476);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 49);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Eliminar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // FormInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 430);
+            this.ClientSize = new System.Drawing.Size(554, 537);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox48);
             this.Controls.Add(this.textBox36);
             this.Controls.Add(this.textBox24);
@@ -532,6 +595,7 @@
             this.Name = "FormInventario";
             this.Text = "Inventario de Producto";
             this.Load += new System.EventHandler(this.FormInventario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -592,5 +656,12 @@
         private System.Windows.Forms.TextBox textBox46;
         private System.Windows.Forms.TextBox textBox47;
         private System.Windows.Forms.TextBox textBox48;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unidades;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cajas;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
