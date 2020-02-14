@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresoSalidaDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,8 +161,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(809, 355);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenu";
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.FormMenu_Load);

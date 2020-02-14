@@ -24,19 +24,19 @@ namespace InventarioFarmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string usuario1, usuario2;
-            string contrasena1, contrasena2;
+            string usuario1, usuario2;         //declaracion de variables usuarios
+            string contrasena1, contrasena2;   //declaracion de variables contraseñas
 
-            usuario1 = textBox1.Text;
+            usuario1 = textBox1.Text;        //la variable usuario1 sera igual a lo que escriba en el tex
             contrasena1 = textBox2.Text;
             usuario2 = textBox1.Text;
             contrasena2 = textBox2.Text;
 
 
-            if (usuario1 == "admin" && contrasena1 == "1234")
+            if (usuario1 == "admin" && contrasena1 == "1234")  //comparamos
             {
-                MessageBox.Show("!!!Bienvenido!!!");
-                this.Close();
+                MessageBox.Show("!!!Bienvenido!!!");//si la condicion se cumple aparece el mensaje e ingresa
+                this.Close(); // este comando cierra el formulario si se cumple
                 }
             else if (usuario2 == "administrator" && contrasena2 == "4567")
             {
@@ -51,7 +51,7 @@ namespace InventarioFarmacia
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //cierra el sistema completamente
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
