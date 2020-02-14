@@ -46,10 +46,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Rtn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RTN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Razon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direeccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(188, 9);
+            this.label1.Location = new System.Drawing.Point(90, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(235, 24);
             this.label1.TabIndex = 1;
@@ -129,65 +129,67 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(94, 70);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(351, 20);
+            this.textBox1.Size = new System.Drawing.Size(238, 20);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(94, 94);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(351, 20);
+            this.textBox2.Size = new System.Drawing.Size(238, 20);
             this.textBox2.TabIndex = 3;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(94, 118);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(351, 20);
+            this.textBox3.Size = new System.Drawing.Size(238, 20);
             this.textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(94, 142);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(351, 20);
+            this.textBox4.Size = new System.Drawing.Size(238, 20);
             this.textBox4.TabIndex = 3;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(94, 166);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(351, 20);
+            this.textBox5.Size = new System.Drawing.Size(238, 20);
             this.textBox5.TabIndex = 3;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(94, 190);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(351, 20);
+            this.textBox6.Size = new System.Drawing.Size(238, 20);
             this.textBox6.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(541, 60);
+            this.button1.Location = new System.Drawing.Point(347, 70);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 37);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Ingresar Proveedor";
+            this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(541, 103);
+            this.button2.Location = new System.Drawing.Point(347, 113);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 37);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Buscar Proveedor";
+            this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(541, 149);
+            this.button3.Location = new System.Drawing.Point(347, 159);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 37);
             this.button3.TabIndex = 4;
@@ -196,7 +198,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(541, 192);
+            this.button4.Location = new System.Drawing.Point(347, 202);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(115, 37);
             this.button4.TabIndex = 4;
@@ -208,36 +210,37 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Rtn,
+            this.RTN,
             this.Empresa,
-            this.Razon,
-            this.Direeccion,
+            this.Razon_Social,
+            this.Direccion,
             this.Ciudad,
             this.Telefono});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 235);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 255);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(644, 168);
+            this.dataGridView1.Size = new System.Drawing.Size(447, 150);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Rtn
+            // RTN
             // 
-            this.Rtn.HeaderText = "RTN";
-            this.Rtn.Name = "Rtn";
+            this.RTN.HeaderText = "RTN";
+            this.RTN.Name = "RTN";
             // 
             // Empresa
             // 
             this.Empresa.HeaderText = "Empresa";
             this.Empresa.Name = "Empresa";
             // 
-            // Razon
+            // Razon_Social
             // 
-            this.Razon.HeaderText = "Razon Social";
-            this.Razon.Name = "Razon";
+            this.Razon_Social.HeaderText = "Razon Social";
+            this.Razon_Social.Name = "Razon_Social";
             // 
-            // Direeccion
+            // Direccion
             // 
-            this.Direeccion.HeaderText = "Direccion";
-            this.Direeccion.Name = "Direeccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
             // 
             // Ciudad
             // 
@@ -253,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 417);
+            this.ClientSize = new System.Drawing.Size(485, 417);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -300,10 +303,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RTN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empresa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Razon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direeccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Razon_Social;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
     }

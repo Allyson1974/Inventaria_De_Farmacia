@@ -55,21 +55,9 @@ namespace InventarioFarmacia
 
         }
 
-        private void proveedoresToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void reporte1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formproveedores = new FormProveedores();
-            formproveedores.ShowDialog();
-        }
 
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var forminventario = new FormInventario();
-            forminventario.ShowDialog();
-        }
-
-        private void logoOutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
