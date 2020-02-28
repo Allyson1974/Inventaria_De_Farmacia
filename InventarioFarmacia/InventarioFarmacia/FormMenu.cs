@@ -54,5 +54,10 @@ namespace InventarioFarmacia
         {
 
         }
+
+        private void reporte1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

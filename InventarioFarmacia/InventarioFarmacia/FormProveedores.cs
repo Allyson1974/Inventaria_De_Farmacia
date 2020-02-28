@@ -59,7 +59,29 @@ namespace InventarioFarmacia
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+            this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {   
+            Proveedorclas provv = new Proveedorclas();
+            ProveedoresBL pro = new ProveedoresBL();
+            var rtn = int.Parse(textBox1.Text);
+
+            pro.Agregar(rtn);
+
+            dataGridView1.DataSource = provv.rtn;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
