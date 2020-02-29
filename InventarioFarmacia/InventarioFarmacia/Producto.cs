@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.InventarioFarmacia;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,23 @@ namespace InventarioFarmacia
 {
     public partial class Producto : Form
     {
+        ProductoBL _producto;
         public Producto()
         {
             InitializeComponent();
+
+            _producto = new ProductoBL();
+            listaProductoBindingSource.DataSource = _producto.ObtenerProducto();
+        }
+
+        private void Producto_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaProductoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            var producto = (Producto)listaProductoBindingSource.Current;
         }
     }
 }
