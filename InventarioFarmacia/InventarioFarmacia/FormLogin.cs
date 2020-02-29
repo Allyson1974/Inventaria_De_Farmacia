@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.InventarioFarmacia;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace InventarioFarmacia
 {
     public partial class FormLogin : Form
     {
+        ClienteBL _cliente;
         public FormLogin()
         {
             InitializeComponent();
+            _cliente = new ClienteBL();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -24,6 +27,7 @@ namespace InventarioFarmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             string usuario1, usuario2;         //declaracion de variables usuarios
             string contrasena1, contrasena2;   //declaracion de variables contraseñas
 
