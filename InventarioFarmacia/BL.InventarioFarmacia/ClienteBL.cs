@@ -22,6 +22,9 @@ namespace BL.InventarioFarmacia
             Cliente1.Id = 1;
             Cliente1.ClienteNombre = "Allyson";
             Cliente1.ClienteCorreo = "alreyes@cemcol.com";
+            Cliente1.ClienteDireccion = "Col. Montefresco";
+            Cliente1.ClienteTelefono = "+50499044889";
+            
 
             ListaCliente.Add(Cliente1);
         }
