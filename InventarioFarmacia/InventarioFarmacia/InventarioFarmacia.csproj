@@ -91,6 +91,12 @@
     <Compile Include="FormProveedores.Designer.cs">
       <DependentUpon>FormProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedorclas.cs" />
@@ -107,6 +113,9 @@
     <EmbeddedResource Include="FormProveedores.resx">
       <DependentUpon>FormProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -117,6 +126,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.Cliente.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.ClienteBL.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.Producto.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.ProductoBL.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.ProveedorBL+Proveedor.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.ProveedorBL.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\seguridad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.InventarioFarmacia\BL.InventarioFarmacia.csproj">
+      <Project>{5dbf52c3-ad95-448f-9447-5f071b507924}</Project>
+      <Name>BL.InventarioFarmacia</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -41,8 +41,10 @@ namespace InventarioFarmacia
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var forminventario = new FormInventario();
-            forminventario.ShowDialog();
+            var productoBl = new Producto();
+            productoBl.ShowDialog();
+            //var forminventario = new FormInventario();
+            //forminventario.ShowDialog();
         }
 
         private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
