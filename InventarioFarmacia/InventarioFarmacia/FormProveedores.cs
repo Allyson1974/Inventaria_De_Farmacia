@@ -75,7 +75,7 @@ namespace InventarioFarmacia
 
             pro.Agregar(rtn);
 
-            dataGridView1.DataSource = provv.rtn;
+            //dataGridView1.DataSource = provv.rtn;
 
         }
 
