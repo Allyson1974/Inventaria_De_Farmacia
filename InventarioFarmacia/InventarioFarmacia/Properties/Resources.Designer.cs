@@ -63,6 +63,16 @@ namespace InventarioFarmacia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap farmaciaaaaaaa {
+            get {
+                object obj = ResourceManager.GetObject("farmaciaaaaaaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seguridad {
             get {
                 object obj = ResourceManager.GetObject("seguridad", resourceCulture);

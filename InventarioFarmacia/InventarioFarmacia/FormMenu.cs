@@ -41,8 +41,8 @@ namespace InventarioFarmacia
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var productoBl = new Producto();
-            productoBl.ShowDialog();
+         //   var productoBl = new Producto();
+           // productoBl.ShowDialog();
             //var forminventario = new FormInventario();
             //forminventario.ShowDialog();
         }
@@ -58,6 +58,12 @@ namespace InventarioFarmacia
         }
 
         private void reporte1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var productoBl = new Producto();
+            productoBl.ShowDialog();
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
         {
 
         }

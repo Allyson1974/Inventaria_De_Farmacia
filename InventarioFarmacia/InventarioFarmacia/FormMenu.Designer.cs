@@ -43,11 +43,16 @@
             this.reporte3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.menuStrip1.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.transaccionesToolStripMenuItem,
             this.mantenimientoToolStripMenuItem,
@@ -56,10 +61,10 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menuStrip1.Size = new System.Drawing.Size(560, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.UseWaitCursor = true;
             // 
             // transaccionesToolStripMenuItem
             // 
@@ -104,15 +109,14 @@
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.productoToolStripMenuItem.Text = "Producto";
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productoToolStripMenuItem.Click += new System.EventHandler(this.productoToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
@@ -129,7 +133,7 @@
             // 
             this.reporte1ToolStripMenuItem.Name = "reporte1ToolStripMenuItem";
             this.reporte1ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.reporte1ToolStripMenuItem.Text = "Reporte de Gastos";
+            this.reporte1ToolStripMenuItem.Text = "Producto";
             this.reporte1ToolStripMenuItem.Click += new System.EventHandler(this.reporte1ToolStripMenuItem_Click);
             // 
             // reporte2ToolStripMenuItem
@@ -155,9 +159,24 @@
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.perfilesToolStripMenuItem.Text = "Log out";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.menuStrip1);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(560, 410);
+            this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(560, 410);
+            this.toolStripContainer1.TabIndex = 2;
+            this.toolStripContainer1.Text = "toolStripContainer1";
             // 
             // FormMenu
             // 
@@ -165,19 +184,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(560, 410);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.toolStripContainer1);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("High Tower Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenu";
-            this.Text = "Menu Principal";
-            this.UseWaitCursor = true;
+            this.Text = "Sistema de Farmacia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.ContentPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -197,5 +219,6 @@
         private System.Windows.Forms.ToolStripMenuItem perfilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salidaDeMedicamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trasladoDeMedicamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
     }
 }
