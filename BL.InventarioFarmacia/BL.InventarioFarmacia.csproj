@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteBL.cs" />
+    <Compile Include="Contexto.cs" />
     <Compile Include="ProductoBL.cs" />
     <Compile Include="ProveedorBL.cs" />
     <Compile Include="SeguridadBL.cs" />
