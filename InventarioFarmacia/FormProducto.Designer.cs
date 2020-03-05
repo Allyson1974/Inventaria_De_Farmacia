@@ -173,7 +173,7 @@
             this.listaProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaProductosBindingNavigator.Name = "listaProductosBindingNavigator";
             this.listaProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(741, 25);
+            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(791, 25);
             this.listaProductosBindingNavigator.TabIndex = 0;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -305,7 +305,7 @@
             this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
             this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 268);
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
-            this.listaProductosDataGridView.Size = new System.Drawing.Size(741, 87);
+            this.listaProductosDataGridView.Size = new System.Drawing.Size(791, 290);
             this.listaProductosDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -355,7 +355,7 @@
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripcion", true));
             this.descripcionTextBox.Location = new System.Drawing.Point(101, 84);
             this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(360, 20);
+            this.descripcionTextBox.Size = new System.Drawing.Size(104, 20);
             this.descripcionTextBox.TabIndex = 53;
             // 
             // disponibleCheckBox
@@ -372,7 +372,7 @@
             this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Existencia", true));
             this.existenciaTextBox.Location = new System.Drawing.Point(101, 166);
             this.existenciaTextBox.Name = "existenciaTextBox";
-            this.existenciaTextBox.Size = new System.Drawing.Size(360, 20);
+            this.existenciaTextBox.Size = new System.Drawing.Size(104, 20);
             this.existenciaTextBox.TabIndex = 57;
             // 
             // idTextBox
@@ -380,7 +380,7 @@
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(101, 33);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(360, 20);
+            this.idTextBox.Size = new System.Drawing.Size(104, 20);
             this.idTextBox.TabIndex = 59;
             // 
             // literaTextBox
@@ -388,7 +388,7 @@
             this.literaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Litera", true));
             this.literaTextBox.Location = new System.Drawing.Point(101, 140);
             this.literaTextBox.Name = "literaTextBox";
-            this.literaTextBox.Size = new System.Drawing.Size(360, 20);
+            this.literaTextBox.Size = new System.Drawing.Size(104, 20);
             this.literaTextBox.TabIndex = 61;
             // 
             // medicamentoTextBox
@@ -396,7 +396,7 @@
             this.medicamentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Medicamento", true));
             this.medicamentoTextBox.Location = new System.Drawing.Point(101, 58);
             this.medicamentoTextBox.Name = "medicamentoTextBox";
-            this.medicamentoTextBox.Size = new System.Drawing.Size(360, 20);
+            this.medicamentoTextBox.Size = new System.Drawing.Size(104, 20);
             this.medicamentoTextBox.TabIndex = 63;
             // 
             // precioTextBox
@@ -404,7 +404,7 @@
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Precio", true));
             this.precioTextBox.Location = new System.Drawing.Point(101, 114);
             this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(360, 20);
+            this.precioTextBox.Size = new System.Drawing.Size(104, 20);
             this.precioTextBox.TabIndex = 65;
             // 
             // label1
@@ -436,7 +436,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 367);
+            this.ClientSize = new System.Drawing.Size(791, 570);
             this.Controls.Add(descripcionLabel);
             this.Controls.Add(this.descripcionTextBox);
             this.Controls.Add(disponibleLabel);
