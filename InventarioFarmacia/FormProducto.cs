@@ -24,7 +24,7 @@ namespace InventarioFarmacia
 
         private void FormProducto_Load(object sender, EventArgs e)
         {
-
+            //hola
         }
 
         private void listaProductosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
