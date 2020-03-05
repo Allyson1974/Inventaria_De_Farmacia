@@ -229,6 +229,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -246,6 +247,7 @@
             this.listadeClientesBindingNavigatorSaveItem.Name = "listadeClientesBindingNavigatorSaveItem";
             this.listadeClientesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.listadeClientesBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.listadeClientesBindingNavigatorSaveItem.Click += new System.EventHandler(this.listadeClientesBindingNavigatorSaveItem_Click);
             // 
             // toolStripButton1
             // 

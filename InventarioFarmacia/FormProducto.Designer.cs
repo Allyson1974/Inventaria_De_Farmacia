@@ -173,7 +173,7 @@
             this.listaProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaProductosBindingNavigator.Name = "listaProductosBindingNavigator";
             this.listaProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(791, 25);
+            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(741, 25);
             this.listaProductosBindingNavigator.TabIndex = 0;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -305,7 +305,7 @@
             this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
             this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 268);
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
-            this.listaProductosDataGridView.Size = new System.Drawing.Size(791, 290);
+            this.listaProductosDataGridView.Size = new System.Drawing.Size(741, 87);
             this.listaProductosDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -436,7 +436,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 570);
+            this.ClientSize = new System.Drawing.Size(741, 367);
             this.Controls.Add(descripcionLabel);
             this.Controls.Add(this.descripcionTextBox);
             this.Controls.Add(disponibleLabel);

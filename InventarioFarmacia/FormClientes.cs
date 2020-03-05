@@ -27,5 +27,16 @@ namespace InventarioFarmacia
         {
 
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listadeClientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            var cliente = listadeClientesBindingSource.Current;
+            
+        }
     }
 }

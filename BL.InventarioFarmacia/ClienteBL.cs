@@ -23,7 +23,7 @@ public  class ClienteBL
 
         public BindingList<Cliente> ObtenerCliente()
         {
-           // _contexto.Clientes.load();
+           //_contexto.Clientes.load();
             //ListadeClientes = _contexto.Clientes.Local.ToBindingList();
 
             return ListadeClientes;
