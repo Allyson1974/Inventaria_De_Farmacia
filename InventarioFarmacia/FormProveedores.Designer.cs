@@ -286,7 +286,7 @@
             this.listadeProvedoresDataGridView.DataSource = this.listadeProvedoresBindingSource;
             this.listadeProvedoresDataGridView.Location = new System.Drawing.Point(0, 287);
             this.listadeProvedoresDataGridView.Name = "listadeProvedoresDataGridView";
-            this.listadeProvedoresDataGridView.Size = new System.Drawing.Size(546, 220);
+            this.listadeProvedoresDataGridView.Size = new System.Drawing.Size(543, 113);
             this.listadeProvedoresDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
