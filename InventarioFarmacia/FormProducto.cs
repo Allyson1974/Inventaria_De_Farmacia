@@ -60,10 +60,10 @@ namespace InventarioFarmacia
             if (idTextBox.Text != "")
             {
                 var id = Convert.ToInt32(idTextBox.Text);
-                Eliminar(id);
+             //   Eliminar(id);
             }
         }
-        private void Eliminar(int id);
+       // private void Eliminar(int id);
     }
 
 }
