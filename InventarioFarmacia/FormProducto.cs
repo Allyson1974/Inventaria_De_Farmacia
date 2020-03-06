@@ -52,18 +52,6 @@ namespace InventarioFarmacia
             _productos.AgregarProducto();
             listaProductosBindingSource.MoveLast();
         }
-
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-        {
-            var resultado = MessageBox.Show("Desea Eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
-
-            if (idTextBox.Text != "")
-            {
-                var id = Convert.ToInt32(idTextBox.Text);
-               // Eliminar(id);
-            }
-        }
-        //private void Eliminar(int id);
     }
 
 }
