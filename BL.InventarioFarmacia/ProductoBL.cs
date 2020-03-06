@@ -73,6 +73,22 @@ namespace BL.InventarioFarmacia
         {
             var nuevoProducto = new Producto();
             ListaProductos.Add(nuevoProducto);
+
+           
+        }
+
+        public bool EliminarProducto(int id)
+        {
+            foreach(var Producto in ListaProductos)
+            {
+                if(Producto.Id == id)
+                {
+                    ListaProductos.Remove(Producto);
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 

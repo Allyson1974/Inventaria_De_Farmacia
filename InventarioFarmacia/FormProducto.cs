@@ -24,11 +24,12 @@ namespace InventarioFarmacia
 
         private void FormProducto_Load(object sender, EventArgs e)
         {
-            //hola
+            
         }
 
         private void listaProductosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+            listaProductosBindingSource.EndEdit();
             var productos = (Producto)listaProductosBindingSource.Current;
             var resultado = _productos.GuardarProducto(productos);
 
@@ -51,5 +52,18 @@ namespace InventarioFarmacia
             _productos.AgregarProducto();
             listaProductosBindingSource.MoveLast();
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Desea Eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
+
+            if (idTextBox.Text != "")
+            {
+                var id = Convert.ToInt32(idTextBox.Text);
+               // Eliminar(id);
+            }
+        }
+        //private void Eliminar(int id);
     }
+
 }
