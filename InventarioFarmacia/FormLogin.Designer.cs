@@ -39,7 +39,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(356, 179);
+            this.button2.Location = new System.Drawing.Point(381, 211);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 11;
@@ -49,7 +49,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(257, 179);
+            this.button1.Location = new System.Drawing.Point(233, 211);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 12;
@@ -59,10 +59,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(346, 127);
+            this.textBox2.Location = new System.Drawing.Point(356, 133);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(110, 20);
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 10;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -80,7 +80,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(228, 98);
+            this.label1.Location = new System.Drawing.Point(225, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 25);
             this.label1.TabIndex = 14;
@@ -92,7 +92,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Lavender;
-            this.label2.Location = new System.Drawing.Point(228, 127);
+            this.label2.Location = new System.Drawing.Point(225, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 25);
             this.label2.TabIndex = 15;
@@ -117,6 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventarioFarmacia.Properties.Resources.seguridad;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(495, 277);
             this.ControlBox = false;
             this.Controls.Add(this.label3);

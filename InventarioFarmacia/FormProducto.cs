@@ -34,14 +34,14 @@ namespace InventarioFarmacia
             var resultado = _productos.GuardarProducto(productos);
 
 
-            if(resultado == true)
+            if(resultado.Exitoso == true)
             {
                 listaProductosBindingSource.ResetBindings(false);
 
             }
             else
             {
-                MessageBox.Show("Ocurrio un error al guardar el producto");
+                MessageBox.Show(resultado.Mensaje);
             }
             
            
