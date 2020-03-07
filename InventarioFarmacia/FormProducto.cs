@@ -52,6 +52,31 @@ namespace InventarioFarmacia
             _productos.AgregarProducto();
             listaProductosBindingSource.MoveLast();
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            var id = Convert.ToInt32(idTextBox.Text);//convirte a numerico el string del texto
+
+            var resultado = _productos.EliminarProducto(id);
+
+            if(resultado == true)
+            {
+                listaProductosBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un Errror al eliminar un producto");
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listaProductosBindingSource.DataSource = _productos.BuscarProducto(textBox1.Text);
+
+            listaProductosBindingSource.ResetBindings(false);
+        }
+
     }
 
 }

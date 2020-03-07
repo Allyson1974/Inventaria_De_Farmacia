@@ -31,15 +31,32 @@ namespace BL.InventarioFarmacia
 
         }
 
+        public BindingList<Producto> BuscarProducto(string nombre)
+        {
+            var resultado = _contexto.Productos
+            .Where(a => a.Descripcion.ToLower().Contains(nombre.ToLower()) == true)
+            .ToList();
+
+            ListaProductos = new BindingList<Producto>(resultado);
+
+            return ListaProductos;
+
+        }
+
         public Resultado GuardarProducto(Producto productos)
         {
             var resultado = Validar(productos);
             if (resultado.Exitoso == false)
-            
+
+            {
+                return resultado;
+            }
+
+            _contexto.SaveChanges();
+
+            resultado.Exitoso = true;
             return resultado;
         }
-
-        _contexto.SaveChanges();
 
         public void AgregarProducto()
         {
@@ -56,6 +73,7 @@ namespace BL.InventarioFarmacia
                 if(Producto.Id == id)
                 {
                     ListaProductos.Remove(Producto);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }
@@ -95,7 +113,7 @@ namespace BL.InventarioFarmacia
     public class Producto
     {
         public int Id { get; set; }
-        public string Medicamento { get; set; }
+        public string Medicamento { get; set; }//tipo de presentacion del medicamento, pastillas
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public string Litera { get; set; }
