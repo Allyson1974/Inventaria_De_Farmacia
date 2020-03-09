@@ -34,14 +34,14 @@ namespace InventarioFarmacia
             var resultado = _productos.GuardarProducto(productos);
 
 
-            if(resultado.Exitoso == true)
-            {
-                listaProductosBindingSource.ResetBindings(false);
+         //   if(resultado.Exitoso == true)
+          //  {
+            //    listaProductosBindingSource.ResetBindings(false);
 
-            }
-            else
+           // }
+           // else
             {
-                MessageBox.Show(resultado.Mensaje);
+           //     MessageBox.Show(resultado.Mensaje);
             }
             
            
