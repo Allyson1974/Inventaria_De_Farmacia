@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.InventarioFarmacia;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity;
@@ -27,7 +28,7 @@ namespace BL.InventarioFarmacia
             _contexto.Productos.Load(); // Productos es una lista de la base de datos, le decimos que a la tabla cargue los datos
             ListaProductos = _contexto.Productos.Local.ToBindingList();//transforma los datos que traiga productos hacia un baindinlist
 
-            return ListaProductos;                                                                             
+            return ListaProductos;
 
         }
 
@@ -72,6 +73,7 @@ namespace BL.InventarioFarmacia
             {
                 if(Producto.Id == id)
                 {
+                    
                     ListaProductos.Remove(Producto);
                     _contexto.SaveChanges();
                     return true;
@@ -116,10 +118,12 @@ namespace BL.InventarioFarmacia
         public string Medicamento { get; set; }//tipo de presentacion del medicamento, pastillas
         public string Descripcion { get; set; }
         public double Precio { get; set; }
-        public string Litera { get; set; }
+        public string Litera { get; set; }//Repisas que se encuentran en un estante ordenadas alfabeticamente de la A asta Z
         public int Existencia { get; set; }
+       // public CategoriaBL MyProperty { get; set; }
+        public byte[] Foto { get; set; }//La imagen se creara en nuestra base de dato byte
         public bool Disponible { get; set; }
-
+        
     }
 
     public class Resultado

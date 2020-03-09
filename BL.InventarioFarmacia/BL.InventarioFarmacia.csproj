@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaBL.cs" />
     <Compile Include="ClienteBL.cs" />
     <Compile Include="Contexto.cs" />
     <Compile Include="ProductoBL.cs" />
@@ -65,6 +66,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CategoriaBL.datasource" />
     <None Include="Properties\DataSources\ClienteBL.Cliente.datasource" />
     <None Include="Properties\DataSources\ClienteBL.datasource" />
     <None Include="Properties\DataSources\Contexto.datasource" />
@@ -72,6 +74,7 @@
     <None Include="Properties\DataSources\ProductoBL.datasource" />
     <None Include="Properties\DataSources\Proveedor.datasource" />
     <None Include="Properties\DataSources\ProveedorBL.datasource" />
+    <None Include="Properties\DataSources\Resultado.datasource" />
     <None Include="Properties\DataSources\SeguridadBL.datasource" />
     <None Include="Properties\DataSources\Usurario.datasource" />
   </ItemGroup>

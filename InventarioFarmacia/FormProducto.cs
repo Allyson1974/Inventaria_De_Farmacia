@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,15 @@ namespace InventarioFarmacia
             listaProductosBindingSource.EndEdit();
             var productos = (Producto)listaProductosBindingSource.Current;
             var resultado = _productos.GuardarProducto(productos);
+
+            if (fotoPictureBox.Image != null)
+            {
+                productos.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+            }
+            else
+            {
+                productos.Foto = null;
+            }
 
 
             if(resultado.Exitoso == true)
@@ -62,6 +72,7 @@ namespace InventarioFarmacia
             if(resultado == true)
             {
                 listaProductosBindingSource.ResetBindings(false);
+
             }
             else
             {
@@ -77,6 +88,47 @@ namespace InventarioFarmacia
             listaProductosBindingSource.ResetBindings(false);
         }
 
+        private void idTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var productos = (Producto)listaProductosBindingSource.Current;
+
+            if (productos !=null)
+            {
+                openFileDialog1.ShowDialog();
+                var archivo = openFileDialog1.FileName;
+
+                if (archivo != "")
+
+                {
+                    var fileInfo = new FileInfo(archivo);
+                    var fileStream = fileInfo.OpenRead();//leer archivo por partes
+
+                    fotoPictureBox.Image = Image.FromStream(fileStream);
+
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("CREE UN PRODUCTO ANTES DE ASIGNARLE UNA IMAGEN");
+            }
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            fotoPictureBox.Image = null;
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 
 }
