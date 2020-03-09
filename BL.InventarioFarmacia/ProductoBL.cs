@@ -27,7 +27,7 @@ namespace BL.InventarioFarmacia
             _contexto.Productos.Load(); // Productos es una lista de la base de datos, le decimos que a la tabla cargue los datos
             ListaProductos = _contexto.Productos.Local.ToBindingList();//transforma los datos que traiga productos hacia un baindinlist
 
-            return ListaProductos;
+            return ListaProductos;                                                                             
 
         }
 
