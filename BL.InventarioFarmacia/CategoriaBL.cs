@@ -18,4 +18,10 @@ namespace BL.InventarioFarmacia
         _contexto = new Contexto();
         ListaCategorias = new BindingList<Categoria>();
     }*/
+   // public BindingList<categoria> ObtenerCategorias();
+    //{
+    //_contexto.Categorias.Load();
+    // ListaCategorias = Contexto.Categorias.Local.To
+    
+  //  }
 }
