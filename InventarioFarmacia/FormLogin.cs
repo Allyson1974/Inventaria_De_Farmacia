@@ -60,12 +60,12 @@ namespace InventarioFarmacia
 
             if (resultado == true)  //comparamos
             {
-                MessageBox.Show("!!!Bienvenido!!!");//si la condicion se cumple aparece el mensaje e ingresa
+                MessageBox.Show("!!!Bienvenido Sistema de Farmacia!!!");//si la condicion se cumple aparece el mensaje e ingresa
                 this.Close(); // este comando cierra el formulario si se cumple
             }
             else if (usuario1 == "administrator" && contrasena1 == "4567")
             {
-                MessageBox.Show("!!!Bienvenido!!!");
+                MessageBox.Show("!!!Bienvenido Sistema de Farmacia!!!");
                 this.Close();
             }
             else
@@ -85,23 +85,27 @@ namespace InventarioFarmacia
         {
 
 
-            string usuario1;       //declaracion de variables usuarios
-            string contrasena1; //declaracion de variables contraseñas
+            string usuario;       //declaracion de variables usuarios
+            string contrasena; //declaracion de variables contraseñas
 
-            usuario1 = textBox1.Text;        //la variable usuario1 sera igual a lo que escriba en el tex
-            contrasena1 = textBox2.Text;
+            usuario = textBox1.Text;        //la variable usuario1 sera igual a lo que escriba en el tex
+            contrasena = textBox2.Text;
+
+            button1.Enabled = false;
+            button1.Text = "Verficando";
+            Application.DoEvents();
            
 
-          var resultado = _seguridad.Autorizar(usuario1, contrasena1);
+          var resultado = _seguridad.Autorizar(usuario, contrasena);
 
             if (resultado== true)  //comparamos
             {
-                MessageBox.Show("!!!Bienvenido!!!");//si la condicion se cumple aparece el mensaje e ingresa
+                MessageBox.Show("Bienvenido al Sistema de Farmacia!");//si la condicion se cumple aparece el mensaje e ingresa
                 this.Close(); // este comando cierra el formulario si se cumple
                 }
-            else if (usuario1 == "administrator" && contrasena1 == "4567")
+            else if (usuario == "administrator" && contrasena == "4567")
             {
-                MessageBox.Show("!!!Bienvenido!!!");
+                MessageBox.Show("Bienvenido al Sistema de Farmacia!");
                 this.Close();
             }
             else

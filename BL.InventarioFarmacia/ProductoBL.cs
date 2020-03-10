@@ -120,13 +120,16 @@ namespace BL.InventarioFarmacia
         public double Precio { get; set; }
         public string Litera { get; set; }//Repisas que se encuentran en un estante ordenadas alfabeticamente de la A asta Z
         public int Existencia { get; set; }
+        public int CategoriaId { get; set; }
+        public Categoria Categoria { get; set; }
+        public int TipoId { get; set; }
+        public Tipo Tipo { get; set; }
         public byte[] Foto { get; set; }//La imagen se creara en nuestra base de dato byte
         public bool Disponible { get; set; }
 
         public Producto()
         {
-         
-
+            //Activo = true;
         }
 
     }
