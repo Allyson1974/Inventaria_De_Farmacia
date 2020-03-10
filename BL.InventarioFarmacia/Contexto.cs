@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.InventarioFarmacia;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -22,6 +23,5 @@ namespace BL.InventarioFarmacia
         }
 
         public DbSet<Producto> Productos { get; set; }
-        public DbSet<Proveedor> Proveedores { get; set; }
     }
 }
