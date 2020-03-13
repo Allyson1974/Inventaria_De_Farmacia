@@ -135,7 +135,7 @@ namespace BL.InventarioFarmacia
         public int Existencia { get; set; }
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
-        public int TipoId { get; set; }//pregintara deme el "tipo" y lo creara un campo foraneo
+        public int TipoId { get; set; }//preguntara deme el "tipo" y lo creara un campo foraneo
         public Tipo Tipo { get; set; }
         public byte[] Foto { get; set; }//La imagen se creara en nuestra base de dato byte
         public bool Disponible { get; set; }

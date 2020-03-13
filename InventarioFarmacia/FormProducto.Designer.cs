@@ -38,8 +38,8 @@
             System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label fotoLabel;
             System.Windows.Forms.Label tipoIdLabel1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducto));
             System.Windows.Forms.Label descripcionLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducto));
             this.listaProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -182,6 +182,16 @@
             tipoIdLabel1.Size = new System.Drawing.Size(31, 13);
             tipoIdLabel1.TabIndex = 69;
             tipoIdLabel1.Text = "Tipo:";
+            // 
+            // descripcionLabel1
+            // 
+            descripcionLabel1.AutoSize = true;
+            descripcionLabel1.Location = new System.Drawing.Point(6, 142);
+            descripcionLabel1.Name = "descripcionLabel1";
+            descripcionLabel1.Size = new System.Drawing.Size(55, 13);
+            descripcionLabel1.TabIndex = 70;
+            descripcionLabel1.Text = "Categoria:";
+            descripcionLabel1.Click += new System.EventHandler(this.descripcionLabel1_Click);
             // 
             // listaProductosBindingNavigator
             // 
@@ -529,16 +539,6 @@
             this.tipoIdComboBox1.Size = new System.Drawing.Size(285, 21);
             this.tipoIdComboBox1.TabIndex = 70;
             this.tipoIdComboBox1.ValueMember = "Id";
-            // 
-            // descripcionLabel1
-            // 
-            descripcionLabel1.AutoSize = true;
-            descripcionLabel1.Location = new System.Drawing.Point(6, 142);
-            descripcionLabel1.Name = "descripcionLabel1";
-            descripcionLabel1.Size = new System.Drawing.Size(55, 13);
-            descripcionLabel1.TabIndex = 70;
-            descripcionLabel1.Text = "Categoria:";
-            descripcionLabel1.Click += new System.EventHandler(this.descripcionLabel1_Click);
             // 
             // descripcionComboBox
             // 
