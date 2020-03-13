@@ -141,10 +141,13 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.Categoria.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.CategoriasBL.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.ClienteBL+Cliente.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.ClienteBL.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.Producto.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.ProductoBL.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.productosBL.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.Proveedor.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.ProveedorBL.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.SeguridadBL.datasource" />

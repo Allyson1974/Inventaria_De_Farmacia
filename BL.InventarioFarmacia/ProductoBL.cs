@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace BL.InventarioFarmacia                     
 {
-   public class ProductoBL
+   public class productosBL
     {
         Contexto _contexto;
        public BindingList<Producto> ListaProductos { get; set; }
 
-        public ProductoBL()
+        public productosBL()
         {
 
             _contexto = new Contexto();
@@ -50,12 +50,13 @@ namespace BL.InventarioFarmacia
             if (resultado.Exitoso == false)
 
             {
-                return resultado;
+               return resultado;
             }
 
             _contexto.SaveChanges();
 
             resultado.Exitoso = true;
+            resultado.Mensaje = "Producto Guardado Exitosamente";
             return resultado;
         }
 
@@ -107,6 +108,18 @@ namespace BL.InventarioFarmacia
                 resultado.Mensaje = "El precio tiene que ser mayor que cero";
                 resultado.Exitoso = false;
             }
+            if(producto.TipoId == 0)
+            {
+                resultado.Mensaje = "Seleccione una Tipo";
+                resultado.Exitoso = false;
+
+            }
+            if (producto.CategoriaId == 0)
+            {
+                resultado.Mensaje = "Seleccione una Categoria";
+                resultado.Exitoso = false;
+
+            }
 
             return resultado;
         }
@@ -122,14 +135,15 @@ namespace BL.InventarioFarmacia
         public int Existencia { get; set; }
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
-        public int TipoId { get; set; }
+        public int TipoId { get; set; }//pregintara deme el "tipo" y lo creara un campo foraneo
         public Tipo Tipo { get; set; }
         public byte[] Foto { get; set; }//La imagen se creara en nuestra base de dato byte
         public bool Disponible { get; set; }
+        public bool Activo { get; private set; }
 
         public Producto()
         {
-            //Activo = true;
+            Activo = true;
         }
 
     }

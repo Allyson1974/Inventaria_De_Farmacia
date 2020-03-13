@@ -11,14 +11,13 @@ namespace BL.InventarioFarmacia
 
         List<Usurario> ListadeUsusarios;
 
-        Contexto _contexto;// no est
+        Contexto _contexto;
 
         public SeguridadBL()
         {
-            {
-                _contexto = new Contexto();
-            }
-            ListadeUsusarios = new List<Usurario>();
+           
+           _contexto = new Contexto();
+           ListadeUsusarios = new List<Usurario>();
 
             var usuario1 = new Usurario();
             usuario1.Nombre = "admin";
@@ -32,14 +31,15 @@ namespace BL.InventarioFarmacia
             ListadeUsusarios.Add(usuario2);
 
         }
-      public  bool Autorizar(string usuario, string contrasena )
+      public  bool Autorizar(string usuario1, string contraseña1)
 
         {
-            var usuarios = _contexto.Usuarios.ToList();
-            
+            var usuarios = _contexto.Usuarios.ToList();//traiga a la lista todos los usuarios estara preguntado a todos los usuarios
+
             foreach (var usuarioDB in usuarios)
+
             {
-                if (usuario == usuarioDB.Nombre && contrasena == usuarioDB.Contraseña)
+                if (usuario1 == usuarioDB.Nombre && contraseña1 == usuarioDB.Contraseña)
                 {
                     return true;
                 }

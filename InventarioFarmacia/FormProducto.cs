@@ -14,13 +14,27 @@ namespace InventarioFarmacia
 {
     public partial class FormProducto : Form
     {
-        ProductoBL _productos;
+        productosBL _productos;
+        CategoriasBL _categorias;
+        TiposBL _tiposBL;
+        
+
+        //private readonly object listaCategoriasBindingSource;
+
         public FormProducto()
         {
             InitializeComponent();
 
-            _productos = new ProductoBL();
+  
+            _productos = new productosBL();
             listaProductosBindingSource.DataSource = _productos.ObtenerProducto();
+
+            _categorias = new CategoriasBL();
+            listaCategoriasBindingSource1.DataSource = _categorias.ObtenerCategorias();
+
+            _tiposBL = new TiposBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
+
         }
 
         private void FormProducto_Load(object sender, EventArgs e)
@@ -44,14 +58,15 @@ namespace InventarioFarmacia
             }
 
 
-         //   if(resultado.Exitoso == true)
-          //  {
-            //    listaProductosBindingSource.ResetBindings(false);
+          if(resultado.Exitoso == true)
+           {
+                MessageBox.Show(resultado.Mensaje);
+                listaProductosBindingSource.ResetBindings(false);
 
-           // }
-           // else
+            }
+            else
             {
-           //     MessageBox.Show(resultado.Mensaje);
+                MessageBox.Show(resultado.Mensaje);
             }
             
            
@@ -105,10 +120,10 @@ namespace InventarioFarmacia
                 if (archivo != "")
 
                 {
-                    var fileInfo = new FileInfo(archivo);
-                    var fileStream = fileInfo.OpenRead();//leer archivo por partes
+                    var fileInfo = new FileInfo(archivo);//Nos permite obtener la informacion del archino ("archivo") que es una ruta completa
+                    var fileStream = fileInfo.OpenRead();//leer archivo por partes en % por bite
 
-                    fotoPictureBox.Image = Image.FromStream(fileStream);
+                    fotoPictureBox.Image = Image.FromStream(fileStream);//y luego se agigna = picturebox
 
                 }
             }
@@ -126,6 +141,36 @@ namespace InventarioFarmacia
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipoIdLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void literaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void disponibleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipoIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void descripcionLabel1_Click(object sender, EventArgs e)
         {
 
         }
