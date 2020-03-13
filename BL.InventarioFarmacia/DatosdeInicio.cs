@@ -18,7 +18,7 @@ namespace BL.InventarioFarmacia
 
             contexto.Usuarios.Add(usuarioAdmin);
 
-            var categoria1 = new Categoria();//
+            var categoria1 = new Categoria();//llama a la descripcion y nos dara un mensaje
             categoria1.Descripcion = "Infantil y Adulto";
             contexto.Categorias.Add(categoria1);
 
