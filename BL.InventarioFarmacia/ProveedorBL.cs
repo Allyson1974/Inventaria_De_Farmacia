@@ -11,7 +11,7 @@ namespace BL.InventarioFarmacia
     public class ProveedorBL
     {
         Contexto _contexto;
-        //public BindingList<Proveedor> ListadeProveedores { get; set; }
+        public BindingList<Proveedor> ListadeProveedores { get; set; }
         public BindingList<Proveedor> ListaProveedores { get; set; }
 
         public ProveedorBL()
@@ -24,24 +24,24 @@ namespace BL.InventarioFarmacia
 
         public BindingList<Proveedor> ObtenerProveedor()
         {
-           // _contexto..Load();
-            //ListaProveedores = _contexto.Proveedores.Local.ToBindingList();
+            _contexto.Proveedor.Load();
+           ListaProveedores = _contexto.Proveedor.Local.ToBindingList();
 
             return ListaProveedores;
 
         }
 
-      /*  public BindingList<Proveedor> BuscarProveedor(string nombre)
+      public BindingList<Proveedor> BuscarProveedor(string nombre)
         {
-            var resultado = _contexto.Proveedores
-           // .Where(a => a.Id.ToLower().Contains(nombre.ToLower()) == true)
+            var resultado = _contexto.Proveedor
+           .Where(a => a.Telefono.ToLower().Contains(nombre.ToLower()) == true)
             .ToList();
 
             ListaProveedores = new BindingList<Proveedor>(resultado);
 
-           // return ListaProveedores;
+           return ListaProveedores;
 
-        }*/
+        }
 
          public Resultado GuardarProoveedor(Proveedor proveedor)
         {
@@ -55,6 +55,7 @@ namespace BL.InventarioFarmacia
             _contexto.SaveChanges();
 
             resultado.Exitoso = true;
+            resultado.Mensaje = "Proveedor Guardado Exitosamente";
             return resultado;
         }
         
@@ -97,14 +98,18 @@ namespace BL.InventarioFarmacia
             public string Telefono { get; set; }
             public bool Disponible { get; set; }
 
+            public class Resultado
+            {
+                public bool Exitoso { get; set; }
+                public string Mensaje { get; set; }
+
+            }
+
         }
 
-        public class Resultado
-        {
-            public bool Exitoso { get; set; }
-            public string Mensaje { get; set; }
-
-        }
     }
+
+    
+    
 }
 
