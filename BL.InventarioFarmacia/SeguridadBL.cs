@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,9 +35,9 @@ namespace BL.InventarioFarmacia
       public  bool Autorizar(string usuario1, string contraseña1)
 
         {
-            var usuarios = _contexto.Usuarios.ToList();//traiga a la lista todos los usuarios estara preguntado a todos los usuarios
+            var usuario = _contexto.Usuarios.ToList();//traiga a la lista todos los usuarios estara preguntado a todos los usuarios
 
-            foreach (var usuarioDB in usuarios)
+            foreach (var usuarioDB in usuario)
 
             {
                 if (usuario1 == usuarioDB.Nombre && contraseña1 == usuarioDB.Contraseña)
@@ -48,4 +49,5 @@ namespace BL.InventarioFarmacia
             return false;
         }
     }
+
 }

@@ -58,6 +58,7 @@
     <Compile Include="ClienteBL.cs" />
     <Compile Include="Contexto.cs" />
     <Compile Include="DatosdeInicio.cs" />
+    <Compile Include="FacturaBL.cs" />
     <Compile Include="ProductoBL.cs" />
     <Compile Include="ProveedorBL.cs" />
     <Compile Include="SeguridadBL.cs" />
@@ -68,16 +69,27 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Categoria.datasource" />
     <None Include="Properties\DataSources\CategoriaBL.datasource" />
+    <None Include="Properties\DataSources\CategoriasBL.datasource" />
     <None Include="Properties\DataSources\ClienteBL.Cliente.datasource" />
     <None Include="Properties\DataSources\ClienteBL.datasource" />
     <None Include="Properties\DataSources\Contexto.datasource" />
+    <None Include="Properties\DataSources\DatosdeInicio.datasource" />
+    <None Include="Properties\DataSources\Factura.datasource" />
+    <None Include="Properties\DataSources\FacturaBL.datasource" />
     <None Include="Properties\DataSources\Producto.datasource" />
     <None Include="Properties\DataSources\ProductoBL.datasource" />
+    <None Include="Properties\DataSources\productosBL.datasource" />
     <None Include="Properties\DataSources\Proveedor.datasource" />
+    <None Include="Properties\DataSources\Proveedor1.datasource" />
     <None Include="Properties\DataSources\ProveedorBL.datasource" />
+    <None Include="Properties\DataSources\ProveedorBL.Proveedor.datasource" />
+    <None Include="Properties\DataSources\ProveedorBL.Resultado.datasource" />
     <None Include="Properties\DataSources\Resultado.datasource" />
     <None Include="Properties\DataSources\SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\Tipo.datasource" />
+    <None Include="Properties\DataSources\TiposBL.datasource" />
     <None Include="Properties\DataSources\Usurario.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

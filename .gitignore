@@ -240,3 +240,12 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/BL.InventarioFarmacia/Properties/DataSources/Categoria.datasource
+/BL.InventarioFarmacia/Properties/DataSources/TiposBL.datasource
+/BL.InventarioFarmacia/Properties/DataSources/Tipo.datasource
+/BL.InventarioFarmacia/Properties/DataSources/ProveedorBL.Resultado.datasource
+/BL.InventarioFarmacia/Properties/DataSources/ProveedorBL.Proveedor.datasource
+/BL.InventarioFarmacia/Properties/DataSources/Proveedor1.datasource
+/BL.InventarioFarmacia/Properties/DataSources/productosBL.datasource
+/BL.InventarioFarmacia/Properties/DataSources/DatosdeInicio.datasource
+/BL.InventarioFarmacia/Properties/DataSources/CategoriasBL.datasource

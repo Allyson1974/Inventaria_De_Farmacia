@@ -87,29 +87,48 @@ namespace BL.InventarioFarmacia
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            return resultado;
-          }
-        public class Proveedor
-        {
-            public int Id { get; set; }
-            public int RTN { get; set; }
-            public string Empresa { get; set; }
-            public string Direccion { get; set; }
-            public string Telefono { get; set; }
-            public bool Disponible { get; set; }
-
-            public class Resultado
+            if (string.IsNullOrEmpty(proveedor.Empresa) == true)
             {
-                public bool Exitoso { get; set; }
-                public string Mensaje { get; set; }
-
+                resultado.Mensaje = "Ingrese el nombre de la empresa";
+                resultado.Exitoso = false;
             }
 
-        }
+
+            if (proveedor.RTN < 0)
+            {
+                resultado.Mensaje = "El RTN no debe estar vacio";
+                resultado.Exitoso = false;
+            }
+
+
+            if (proveedor.Direccion == null)
+            {
+                resultado.Mensaje = "LA direccion no debe estar Vacia";
+                resultado.Exitoso = false;
+            }
+
+            return resultado;
+          }
+
+
+    }
+    public class Proveedor
+    {
+        public int Id { get; set; }
+        public int RTN { get; set; }
+        public string Empresa { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public bool Disponible { get; set; }
+
+       /* public class Resultado
+        {
+            public bool Exitoso { get; set; }
+            public string Mensaje { get; set; }
+
+        }*/
 
     }
 
-    
-    
 }
 

@@ -94,7 +94,7 @@ namespace InventarioFarmacia
 
         }
 
-        private void listaProveedoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        /*private void listaProveedoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
           {
               listaProveedoresBindingSource.EndEdit();
               var proveedor = (Proveedor)listaProveedoresBindingSource.Current;
@@ -110,7 +110,7 @@ namespace InventarioFarmacia
               {
                   MessageBox.Show(resultado.Mensaje);
               }
-          }
+          }*/
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
           {
@@ -133,5 +133,10 @@ namespace InventarioFarmacia
                _proveedor.AgregarProveedor();
                listaProveedoresBindingSource.MoveLast();
            }
+
+        private void listadeProveedoresBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
