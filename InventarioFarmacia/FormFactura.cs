@@ -88,5 +88,24 @@ namespace InventarioFarmacia
             DeshabilitarHabilitarBotones(true);
             _facturaBL.CancelarCambios();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listadeFacturasBindingSource.Current;
+
+            _facturaBL.AgregarFacturaDetalle(factura);
+
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listadeFacturasBindingSource.Current;
+            var facturaDetalle = (FacturaDetalle)facturaDetalleBindingSource.Current;
+
+            _facturaBL.RemoverFacturaDetalle(factura, facturaDetalle);
+
+            DeshabilitarHabilitarBotones(false);
+        }
     }
 }

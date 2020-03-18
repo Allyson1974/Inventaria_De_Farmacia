@@ -31,6 +31,23 @@ namespace BL.InventarioFarmacia
             _contexto.Facturas.Add(nuevaFactura);
         }
 
+        public void AgregarFacturaDetalle(Factura factura)
+        {
+            if (factura !=null)
+            {
+                var nuevoDetalle = new FacturaDetalle();
+                factura.FacturaDetalle.Add(nuevoDetalle);
+            }
+        }
+
+        public void RemoverFacturaDetalle(Factura factura, FacturaDetalle facturadetalle)
+        {
+            if (factura != null && facturadetalle != null)
+            {
+                factura.FacturaDetalle.Remove(facturadetalle);
+            }
+        }
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())//Contexto = guarda una memoria de todo lo que trajo  de la bd.// Tracker = son todos los cabios eliminar, agregar,actualizar,
