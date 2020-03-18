@@ -107,5 +107,10 @@ namespace InventarioFarmacia
 
             DeshabilitarHabilitarBotones(false);
         }
+
+        private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        }
     }
 }
