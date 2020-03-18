@@ -73,13 +73,20 @@ namespace InventarioFarmacia
         private void proveedoresToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var Proveedores = new FormProveedores();
-            Proveedores.ShowDialog();
+            Proveedores.Show();
         }
 
         private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var Clientes = new FormClientes();
             Clientes.ShowDialog();
+        }
+
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formFactura = new FormFactura();
+            formFactura.MdiParent = this;
+            formFactura.Show();
         }
     }
 }
