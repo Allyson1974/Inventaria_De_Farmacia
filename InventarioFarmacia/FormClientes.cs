@@ -67,7 +67,7 @@ namespace InventarioFarmacia
         private void listadeClientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             listadeClientesBindingSource.EndEdit();
-            var clientes = (ClienteBL.Cliente)listadeClientesBindingSource.Current;
+            var clientes = (Cliente)listadeClientesBindingSource.Current;
             var resultado = _clientes.GuardarCliente(clientes);
 
             if (resultado.Exitoso == true)

@@ -93,20 +93,20 @@ public  class ClienteBL
             }
             return false;
         }
-        public class Cliente
-        {
-
-            public int Id { get; set; }
-            public string Rtn { get; set; }//campo para identidad o rtn
-            public string Nombre { get; set; }
-            public string Apellido { get; set; }
-            public string Direccion { get; set; }
-            public string Correo { get; set; }
-
-
-        }
+        
 
     }
-    
+    public class Cliente
+    {
+
+        public int Id { get; set; }
+        public string Rtn { get; set; }//campo para identidad o rtn
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Direccion { get; set; }
+        public string Correo { get; set; }
+
+
+    }
 
 }

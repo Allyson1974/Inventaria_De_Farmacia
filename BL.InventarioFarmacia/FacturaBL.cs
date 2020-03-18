@@ -70,7 +70,7 @@ namespace BL.InventarioFarmacia
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
         public int ClienteId { get; set; }
-        public ClienteBL  CLiente { get; set; }
+        public Cliente  CLiente { get; set; }
         public BindingList<FacturaDetalle> FacturaDetalle { get; set; }
         public double Subtotal { get; set; }
         public double Impuesto { get; set; }

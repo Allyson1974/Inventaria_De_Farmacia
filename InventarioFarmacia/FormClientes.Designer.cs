@@ -150,7 +150,7 @@
             // 
             // listadeClientesBindingSource
             // 
-            this.listadeClientesBindingSource.DataSource = typeof(BL.InventarioFarmacia.ClienteBL.Cliente);
+            this.listadeClientesBindingSource.DataSource = typeof(BL.InventarioFarmacia.Cliente);
             // 
             // listadeClientesBindingNavigator
             // 
