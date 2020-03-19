@@ -76,6 +76,41 @@ namespace BL.InventarioFarmacia
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
+
+            if (factura == null)
+            {
+                resultado.Mensaje = "Agregue una factura para poder Salvar";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
+            if (factura.Activo == false)
+            {
+                resultado.Mensaje = "La Factura esta anulada y no se pueden realizar cambios en ella";
+                resultado.Exitoso = false;
+            }
+
+            if (factura.ClienteId == 0)
+            {
+                resultado.Mensaje = "Seleccione un cliente";
+                resultado.Exitoso = false;
+            }
+
+            if (factura.FacturaDetalle.Count == 0)
+            {
+                resultado.Mensaje = "Agregue Productos a la Factura";
+                resultado.Exitoso = false;
+            }
+
+            foreach (var detalle in factura.FacturaDetalle)
+            {
+                if (detalle.ProductoId == 0)
+                {
+                    resultado.Mensaje = "Seleccione productos validos";
+                    resultado.Exitoso = false;
+                }
+            }
                         
             return resultado;
         }
