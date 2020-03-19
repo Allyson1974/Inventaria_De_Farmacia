@@ -61,6 +61,7 @@ namespace InventarioFarmacia
           if(resultado.Exitoso == true)
            {
                 MessageBox.Show(resultado.Mensaje);
+                DeshabilitarHabilitarBotones(true);
                 listaProductosBindingSource.ResetBindings(false);
 
             }
@@ -90,7 +91,7 @@ namespace InventarioFarmacia
 
             bindingNavigatorAddNewItem.Enabled = valor;
             bindingNavigatorDeleteItem.Enabled = valor;
-            Cancelar.Visible = !valor;
+            toolStripButtonCancelar.Visible = !valor;
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
