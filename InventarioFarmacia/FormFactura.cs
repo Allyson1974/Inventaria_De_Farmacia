@@ -124,5 +124,33 @@ namespace InventarioFarmacia
         {
 
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if (idTextBox.Text != "")
+            {
+                var resultado = MessageBox.Show("Desea Anular Esta Factura?", "Anular", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(idTextBox.Text);
+                    Anular(id);
+                }
+            }
+        }
+
+        private void Anular(int id)
+        {
+            var resultado = _facturasBL.AnularFactura(id);
+
+            if (resultado == true)
+            {
+                listadeFacturasBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error al anular la factura");
+            }
+        }
     }
+
 }

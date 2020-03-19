@@ -140,6 +140,20 @@ namespace BL.InventarioFarmacia
 
         }
 
+        public bool AnularFactura(int id)
+        {
+            foreach (var factura in ListadeFacturas)
+            {
+                if (factura.Id == id)
+                {
+                    factura.Activo = false;
+                    _contexto.SaveChanges();
+
+                    return true;
+                }
+            }
+            return false;
+        }
 
       }
 

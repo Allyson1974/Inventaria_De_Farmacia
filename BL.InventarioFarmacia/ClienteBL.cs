@@ -43,6 +43,14 @@ public  class ClienteBL
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+            if (cliente == null)
+            {
+                resultado.Mensaje = "Agregue un Cliente Valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             if (string.IsNullOrEmpty(cliente.Correo) == true)
             {
                 resultado.Mensaje = "Ingrese un Correo";

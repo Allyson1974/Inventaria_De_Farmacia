@@ -99,6 +99,14 @@ namespace BL.InventarioFarmacia
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+            if (producto == null)
+            {
+                resultado.Mensaje = "Agregue un Producto Valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             if (string.IsNullOrEmpty(producto.Descripcion) == true)
             {
                 resultado.Mensaje = "Ingrese una Descripcion";
