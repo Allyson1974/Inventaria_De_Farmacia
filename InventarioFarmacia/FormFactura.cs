@@ -151,6 +151,20 @@ namespace InventarioFarmacia
                 MessageBox.Show("Ocurrio un error al anular la factura");
             }
         }
+
+        private void listadeFacturasBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            var factura = (Factura)listadeFacturasBindingSource.Current;
+
+            if (factura != null && factura.Id != 0 && factura.Activo == false)
+            {
+                label1.Visible = true;
+            }
+            else
+            {
+                label1.Visible = false;
+            }
+        }
     }
 
 }
