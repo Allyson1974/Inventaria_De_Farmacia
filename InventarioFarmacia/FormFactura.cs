@@ -13,15 +13,16 @@ namespace InventarioFarmacia
 {
     public partial class FormFactura : Form
     {
-        FacturaBL _facturaBL;
+        FacturaBL _facturasBL;
         ClienteBL _clientesBL;
         productosBL _productosBL;
         
 
         public FormFactura()
         {
-            _facturaBL = new FacturaBL();
-            listadeFacturasBindingSource.DataSource = _facturaBL.ObtenerFacturas();
+            InitializeComponent();
+            _facturasBL = new FacturaBL();
+            listadeFacturasBindingSource.DataSource = _facturasBL.ObtenerFacturas();
 
             _clientesBL = new ClienteBL();
             listadeClientesBindingSource.DataSource = _clientesBL.ObtenerClientes();
@@ -29,8 +30,6 @@ namespace InventarioFarmacia
             _productosBL = new productosBL();
             listaProductosBindingSource.DataSource = _productosBL.ObtenerProducto();
 
-
-            InitializeComponent();
         }
 
         private void subtotalTextBox_TextChanged(object sender, EventArgs e)
@@ -45,7 +44,7 @@ namespace InventarioFarmacia
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            _facturaBL.AgregarFattura();
+            _facturasBL.AgregarFattura();
             listadeFacturasBindingSource.MoveLast();
 
             DeshabilitarHabilitarBotones(false);
@@ -69,7 +68,7 @@ namespace InventarioFarmacia
             listadeFacturasBindingSource.EndEdit();
 
             var factura = (Factura)listadeFacturasBindingSource.Current;
-            var resultado = _facturaBL.GuardarFactura(factura);
+            var resultado = _facturasBL.GuardarFactura(factura);
 
             if (resultado.Exitoso == true)
             {
@@ -86,14 +85,14 @@ namespace InventarioFarmacia
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
             DeshabilitarHabilitarBotones(true);
-            _facturaBL.CancelarCambios();
+            _facturasBL.CancelarCambios();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var factura = (Factura)listadeFacturasBindingSource.Current;
 
-            _facturaBL.AgregarFacturaDetalle(factura);
+            _facturasBL.AgregarFacturaDetalle(factura);
 
             DeshabilitarHabilitarBotones(false);
         }
@@ -103,7 +102,7 @@ namespace InventarioFarmacia
             var factura = (Factura)listadeFacturasBindingSource.Current;
             var facturaDetalle = (FacturaDetalle)facturaDetalleBindingSource.Current;
 
-            _facturaBL.RemoverFacturaDetalle(factura, facturaDetalle);
+            _facturasBL.RemoverFacturaDetalle(factura, facturaDetalle);
 
             DeshabilitarHabilitarBotones(false);
         }
@@ -111,6 +110,14 @@ namespace InventarioFarmacia
         private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.ThrowException = false;
+        }
+
+        private void facturaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var factura = (Factura)listadeFacturasBindingSource.Current;
+            _facturasBL.CalcularFactura(factura);
+
+            listadeFacturasBindingSource.ResetBindings(false);
         }
     }
 }
