@@ -334,6 +334,7 @@
             this.toolStripButtonCancelar.Text = "Cancelar";
             this.toolStripButtonCancelar.ToolTipText = "toolStripButton1";
             this.toolStripButtonCancelar.Visible = false;
+            this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
             // 
             // listaProductosDataGridView
             // 

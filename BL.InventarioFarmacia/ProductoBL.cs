@@ -44,6 +44,16 @@ namespace BL.InventarioFarmacia
 
         }
 
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())//Contexto = guarda una memoria de todo lo que trajo  de la bd.// Tracker = son todos los cabios eliminar, agregar,actualizar,
+            {                                                      //Entries = Pueden ser generados de un cliente,factura,un producto,y queda almacenado ChangeTracker.
+                item.State = EntityState.Unchanged;
+                item.Reload();
+
+            }
+        }
+
         public Resultado GuardarProducto(Producto productos)
         {
             var resultado = Validar(productos);

@@ -155,7 +155,7 @@
             // 
             // listadeFacturasBindingNavigator
             // 
-            this.listadeFacturasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.listadeFacturasBindingNavigator.AddNewItem = null;
             this.listadeFacturasBindingNavigator.BindingSource = this.listadeFacturasBindingSource;
             this.listadeFacturasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listadeFacturasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;

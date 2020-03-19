@@ -190,6 +190,12 @@ namespace InventarioFarmacia
         {
 
         }
+
+        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
+        {
+            DeshabilitarHabilitarBotones(true);
+            _productos.CancelarCambios();
+        }
     }
 
 }
