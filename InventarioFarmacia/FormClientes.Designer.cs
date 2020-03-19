@@ -80,54 +80,60 @@
             // apellidoLabel
             // 
             apellidoLabel.AutoSize = true;
-            apellidoLabel.Location = new System.Drawing.Point(21, 79);
+            apellidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            apellidoLabel.Location = new System.Drawing.Point(10, 79);
             apellidoLabel.Name = "apellidoLabel";
-            apellidoLabel.Size = new System.Drawing.Size(47, 13);
+            apellidoLabel.Size = new System.Drawing.Size(72, 16);
             apellidoLabel.TabIndex = 55;
             apellidoLabel.Text = "Apellido:";
             // 
             // correoLabel
             // 
             correoLabel.AutoSize = true;
-            correoLabel.Location = new System.Drawing.Point(21, 105);
+            correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            correoLabel.Location = new System.Drawing.Point(10, 105);
             correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(41, 13);
+            correoLabel.Size = new System.Drawing.Size(62, 16);
             correoLabel.TabIndex = 57;
             correoLabel.Text = "Correo:";
             // 
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(21, 131);
+            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            direccionLabel.Location = new System.Drawing.Point(10, 131);
             direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
+            direccionLabel.Size = new System.Drawing.Size(80, 16);
             direccionLabel.TabIndex = 59;
             direccionLabel.Text = "Direccion:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(21, 27);
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(10, 27);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.Size = new System.Drawing.Size(27, 16);
             idLabel.TabIndex = 61;
             idLabel.Text = "Id:";
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(21, 53);
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(10, 53);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.Size = new System.Drawing.Size(69, 16);
             nombreLabel.TabIndex = 63;
             nombreLabel.Text = "Nombre:";
             // 
             // rtnLabel
             // 
             rtnLabel.AutoSize = true;
-            rtnLabel.Location = new System.Drawing.Point(21, 157);
+            rtnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            rtnLabel.Location = new System.Drawing.Point(10, 157);
             rtnLabel.Name = "rtnLabel";
-            rtnLabel.Size = new System.Drawing.Size(27, 13);
+            rtnLabel.Size = new System.Drawing.Size(37, 16);
             rtnLabel.TabIndex = 65;
             rtnLabel.Text = "Rtn:";
             // 
@@ -279,7 +285,7 @@
             // apellidoTextBox
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(82, 76);
+            this.apellidoTextBox.Location = new System.Drawing.Point(93, 76);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(316, 20);
             this.apellidoTextBox.TabIndex = 56;
@@ -287,7 +293,7 @@
             // correoTextBox
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Correo", true));
-            this.correoTextBox.Location = new System.Drawing.Point(82, 102);
+            this.correoTextBox.Location = new System.Drawing.Point(93, 102);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(316, 20);
             this.correoTextBox.TabIndex = 58;
@@ -295,7 +301,7 @@
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(82, 128);
+            this.direccionTextBox.Location = new System.Drawing.Point(93, 128);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(316, 20);
             this.direccionTextBox.TabIndex = 60;
@@ -303,7 +309,7 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(82, 24);
+            this.idTextBox.Location = new System.Drawing.Point(93, 24);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(316, 20);
             this.idTextBox.TabIndex = 62;
@@ -311,7 +317,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(82, 50);
+            this.nombreTextBox.Location = new System.Drawing.Point(93, 50);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(316, 20);
             this.nombreTextBox.TabIndex = 64;
@@ -319,7 +325,7 @@
             // rtnTextBox
             // 
             this.rtnTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeClientesBindingSource, "Rtn", true));
-            this.rtnTextBox.Location = new System.Drawing.Point(82, 154);
+            this.rtnTextBox.Location = new System.Drawing.Point(93, 154);
             this.rtnTextBox.Name = "rtnTextBox";
             this.rtnTextBox.Size = new System.Drawing.Size(316, 20);
             this.rtnTextBox.TabIndex = 66;
