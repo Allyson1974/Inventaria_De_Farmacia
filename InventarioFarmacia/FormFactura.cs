@@ -119,5 +119,10 @@ namespace InventarioFarmacia
 
             listadeFacturasBindingSource.ResetBindings(false);
         }
+
+        private void activoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
