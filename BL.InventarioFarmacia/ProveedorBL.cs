@@ -11,7 +11,6 @@ namespace BL.InventarioFarmacia
     public class ProveedorBL
     {
         Contexto _contexto;
-        public BindingList<Proveedor> ListadeProveedores { get; set; }
         public BindingList<Proveedor> ListaProveedores { get; set; }
 
         public ProveedorBL()

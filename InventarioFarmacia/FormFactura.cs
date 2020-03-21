@@ -115,7 +115,17 @@ namespace InventarioFarmacia
         private void facturaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             var factura = (Factura)listadeFacturasBindingSource.Current;
-            _facturasBL.CalcularFactura(factura);
+            var detalle = (FacturaDetalle)facturaDetalleBindingSource.Current;
+            var mensaje = _facturasBL.VerificarExistencia(detalle);
+
+            if (mensaje == "")
+            {
+                _facturasBL.CalcularFactura(factura);
+            }
+            else
+            {
+                MessageBox.Show(mensaje);
+            }
 
             listadeFacturasBindingSource.ResetBindings(false);
         }
@@ -164,6 +174,17 @@ namespace InventarioFarmacia
             {
                 label1.Visible = false;
             }
+        }
+
+        private void FormFactura_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaProductosBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            var producto = (Producto)listaProductosBindingSource.Current;
+                     
         }
     }
 

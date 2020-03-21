@@ -366,6 +366,7 @@
             // listaProductosBindingSource
             // 
             this.listaProductosBindingSource.DataSource = typeof(BL.InventarioFarmacia.Producto);
+            this.listaProductosBindingSource.CurrentChanged += new System.EventHandler(this.listaProductosBindingSource_CurrentChanged);
             // 
             // clienteIdComboBox
             // 
@@ -493,6 +494,7 @@
             this.Controls.Add(this.listadeFacturasBindingNavigator);
             this.Name = "FormFactura";
             this.Text = "Factura";
+            this.Load += new System.EventHandler(this.FormFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listadeFacturasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeFacturasBindingNavigator)).EndInit();
             this.listadeFacturasBindingNavigator.ResumeLayout(false);

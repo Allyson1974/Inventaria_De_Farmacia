@@ -77,14 +77,17 @@ namespace BL.InventarioFarmacia
 
         private void CalcularExistencia(Factura factura)
         {
+            
             foreach (var detalle in factura.FacturaDetalle)
             {
                 var producto = _contexto.Productos.Find(detalle.ProductoId);
                 if (producto != null)
                 {
+                   
                     if (factura.Activo == true)
                     {
                         producto.Existencia = producto.Existencia - detalle.Cantidad;
+
                     }
                     else
                     {
@@ -93,6 +96,7 @@ namespace BL.InventarioFarmacia
                     
                 }
             }
+            
         }
 
         private Resultado Validar(Factura factura)
@@ -144,6 +148,26 @@ namespace BL.InventarioFarmacia
             return resultado;
         }
 
+        public string VerificarExistencia(FacturaDetalle detalle)
+        {
+            var mensaje = "";
+
+            var producto = _contexto.Productos.Find(detalle.ProductoId);
+
+            if (detalle.Cantidad <=0)
+            {
+                mensaje = "No se permite Facturar cantidades Menores a Cero";
+            }
+
+            if (detalle.Cantidad >= producto.Existencia)
+            {
+               mensaje = "La cantidad solicitada es mayor a la existencia";
+            }
+            
+
+            return mensaje;
+
+        }
         public void CalcularFactura(Factura factura)
         {
             if (factura != null)

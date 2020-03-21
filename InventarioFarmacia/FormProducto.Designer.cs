@@ -365,6 +365,7 @@
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
             this.listaProductosDataGridView.Size = new System.Drawing.Size(752, 246);
             this.listaProductosDataGridView.TabIndex = 1;
+            this.listaProductosDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaProductosDataGridView_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 

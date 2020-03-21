@@ -196,6 +196,12 @@ namespace InventarioFarmacia
             DeshabilitarHabilitarBotones(true);
             _productos.CancelarCambios();
         }
+
+        private void listaProductosDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = sender;
+            var row2 = e;
+        }
     }
 
 }
