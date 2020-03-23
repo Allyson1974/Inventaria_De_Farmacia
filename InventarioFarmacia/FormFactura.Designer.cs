@@ -92,7 +92,7 @@
             activoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             activoLabel.Location = new System.Drawing.Point(248, 59);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(57, 16);
+            activoLabel.Size = new System.Drawing.Size(55, 16);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
@@ -102,7 +102,7 @@
             clienteIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             clienteIdLabel.Location = new System.Drawing.Point(24, 126);
             clienteIdLabel.Name = "clienteIdLabel";
-            clienteIdLabel.Size = new System.Drawing.Size(63, 16);
+            clienteIdLabel.Size = new System.Drawing.Size(60, 16);
             clienteIdLabel.TabIndex = 3;
             clienteIdLabel.Text = "Cliente:";
             // 
@@ -112,7 +112,7 @@
             fechaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaLabel.Location = new System.Drawing.Point(24, 92);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(57, 16);
+            fechaLabel.Size = new System.Drawing.Size(55, 16);
             fechaLabel.TabIndex = 5;
             fechaLabel.Text = "Fecha:";
             // 
@@ -122,7 +122,7 @@
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             idLabel.Location = new System.Drawing.Point(24, 59);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(27, 16);
+            idLabel.Size = new System.Drawing.Size(25, 16);
             idLabel.TabIndex = 7;
             idLabel.Text = "Id:";
             // 
@@ -132,7 +132,7 @@
             impuestoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             impuestoLabel.Location = new System.Drawing.Point(371, 439);
             impuestoLabel.Name = "impuestoLabel";
-            impuestoLabel.Size = new System.Drawing.Size(77, 16);
+            impuestoLabel.Size = new System.Drawing.Size(75, 16);
             impuestoLabel.TabIndex = 9;
             impuestoLabel.Text = "Impuesto:";
             // 
@@ -142,7 +142,7 @@
             subtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             subtotalLabel.Location = new System.Drawing.Point(371, 413);
             subtotalLabel.Name = "subtotalLabel";
-            subtotalLabel.Size = new System.Drawing.Size(71, 16);
+            subtotalLabel.Size = new System.Drawing.Size(69, 16);
             subtotalLabel.TabIndex = 11;
             subtotalLabel.Text = "Subtotal:";
             subtotalLabel.Click += new System.EventHandler(this.subtotalLabel_Click);
@@ -153,7 +153,7 @@
             totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             totalLabel.Location = new System.Drawing.Point(371, 465);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(49, 16);
+            totalLabel.Size = new System.Drawing.Size(48, 16);
             totalLabel.TabIndex = 13;
             totalLabel.Text = "Total:";
             // 
@@ -362,6 +362,7 @@
             // listadeClientesBindingSource
             // 
             this.listadeClientesBindingSource.DataSource = typeof(BL.InventarioFarmacia.Cliente);
+            this.listadeClientesBindingSource.CurrentChanged += new System.EventHandler(this.listadeClientesBindingSource_CurrentChanged);
             // 
             // listaProductosBindingSource
             // 
@@ -386,6 +387,7 @@
             this.facturaDetalleBindingSource.AllowNew = false;
             this.facturaDetalleBindingSource.DataMember = "FacturaDetalle";
             this.facturaDetalleBindingSource.DataSource = this.listadeFacturasBindingSource;
+            this.facturaDetalleBindingSource.CurrentChanged += new System.EventHandler(this.facturaDetalleBindingSource_CurrentChanged);
             // 
             // facturaDetalleDataGridView
             // 
@@ -401,6 +403,7 @@
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(642, 220);
             this.facturaDetalleDataGridView.TabIndex = 15;
+            this.facturaDetalleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellContentClick);
             this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
             this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError);
             // 

@@ -159,7 +159,7 @@ namespace BL.InventarioFarmacia
                 mensaje = "No se permite Facturar cantidades Menores a Cero";
             }
 
-            if (detalle.Cantidad >= producto.Existencia)
+            if (detalle.Cantidad >   producto.Existencia)
             {
                mensaje = "La cantidad solicitada es mayor a la existencia";
             }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,15 +15,12 @@ namespace InventarioFarmacia
     public partial class FormProveedores : Form
     {
         ProveedorBL _proveedor;
-
         public FormProveedores()
         {
             InitializeComponent();
 
             _proveedor = new ProveedorBL();
             listaProveedoresBindingSource.DataSource = _proveedor.ObtenerProveedor();
- 
-
         }
 
         private void FormProveedores_Load(object sender, EventArgs e)
@@ -30,113 +28,80 @@ namespace InventarioFarmacia
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+       /* private void listaProveedoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+            listaProveedoresBindingSource.EndEdit();
+            
+            var proveedor = (Proveedor)listaProveedoresBindingSource.Current;
+            var resultado = _proveedor.GuardarProveedor(proveedor);
 
+            if (resultado.Exitoso == true)
+            {
+                MessageBox.Show(resultado.Mensaje);
+                DeshabilitarHabilitarBotones(true);
+                listaProveedoresBindingSource.ResetBindings(false);
+
+            }
+            else
+            {
+                MessageBox.Show(resultado.Mensaje);
+            }
+
+
+        }*/
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            _proveedor.AgregarProveedor();
+             listaProveedoresBindingSource.MoveLast();
+
+            DeshabilitarHabilitarBotones(false);
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void DeshabilitarHabilitarBotones(bool valor)
         {
+            bindingNavigatorMoveFirstItem.Enabled = valor;
+            bindingNavigatorMoveLastItem.Enabled = valor;
+            bindingNavigatorMovePreviousItem.Enabled = valor;
+            bindingNavigatorMoveNextItem.Enabled = valor;
+            bindingNavigatorPositionItem.Enabled = valor;
 
+            bindingNavigatorAddNewItem.Enabled = valor;
+            bindingNavigatorDeleteItem.Enabled = valor;
+            toolStripButtonCancelar.Visible = !valor;
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
+            var id = Convert.ToInt32(idTextBox.Text);//convirte a numerico el string del texto
 
-        }
+            var resultado = _proveedor.EliminarProveedor(id);
 
-        private void label4_Click(object sender, EventArgs e)
-        {
+            if (resultado == true)
+            {
+                listaProveedoresBindingSource.ResetBindings(false);
 
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un Errror al eliminar un proveedor");
+            }
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            listaProveedoresBindingSource.DataSource = _proveedor.BuscarProveedor(textBox1.Text);
+
+            listaProveedoresBindingSource.ResetBindings(false);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listadeProveedoresBindingNavigator_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
-
-        /*private void listaProveedoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-          {
-              listaProveedoresBindingSource.EndEdit();
-              var proveedor = (Proveedor)listaProveedoresBindingSource.Current;
-              var resultado = _proveedor.GuardarProoveedor(proveedor);
-
-
-              if (resultado.Exitoso == true)
-              {
-                  listaProveedoresBindingSource.ResetBindings(false);
-
-              }
-              else
-              {
-                  MessageBox.Show(resultado.Mensaje);
-              }
-          }*/
-
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-          {
-              var id = Convert.ToInt32(idTextBox.Text);//convirte a numerico el string del texto
-
-              var resultado = _proveedor.EliminarProveedor(id);
-
-              if (resultado == true)
-              {
-                  listaProveedoresBindingSource.ResetBindings(false);
-              }
-              else
-              {
-                  MessageBox.Show("Ocurrio un Errror al eliminar un producto");
-              }
-          }
-
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-           {
-               _proveedor.AgregarProveedor();
-               listaProveedoresBindingSource.MoveLast();
-           }
-
-        private void listadeProveedoresBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
+            DeshabilitarHabilitarBotones(true);
+            _proveedor.CancelarCambios();
         }
     }
+
+    
 }

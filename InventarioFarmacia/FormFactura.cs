@@ -186,6 +186,21 @@ namespace InventarioFarmacia
             var producto = (Producto)listaProductosBindingSource.Current;
                      
         }
+
+        private void facturaDetalleBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facturaDetalleDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void listadeClientesBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -41,8 +41,8 @@ namespace BL.InventarioFarmacia
            return ListaProveedores;
 
         }
-
-         public Resultado GuardarProoveedor(Proveedor proveedor)
+        
+        public Resultado GuardarProveedor(Proveedor proveedor)
         {
             var resultado = Validar(proveedor);
             if (resultado.Exitoso == false)
@@ -79,6 +79,16 @@ namespace BL.InventarioFarmacia
             }
 
             return false;
+        }
+
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())//Contexto = guarda una memoria de todo lo que trajo  de la bd.// Tracker = son todos los cabios eliminar, agregar,actualizar,
+            {                                                      //Entries = Pueden ser generados de un cliente,factura,un producto,y queda almacenado ChangeTracker.
+                item.State = EntityState.Unchanged;
+                item.Reload();
+
+            }
         }
 
         private Resultado Validar(Proveedor proveedor)
