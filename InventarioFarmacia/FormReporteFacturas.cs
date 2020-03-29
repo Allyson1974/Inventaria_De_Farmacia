@@ -21,7 +21,7 @@ namespace InventarioFarmacia
             var bindingSource = new BindingSource();//Para enlasar el reporte
             bindingSource.DataSource = _facturasBL.ObtenerFacturas();
 
-            var reporte = new ReporteProductos();//creamos nuestro reporte que es nuestro archivo de cristal report
+            var reporte = new ReporteFacturas();//creamos nuestro reporte que es nuestro archivo de cristal report
             reporte.SetDataSource(bindingSource);
 
             crystalReportViewer1.ReportSource = reporte;

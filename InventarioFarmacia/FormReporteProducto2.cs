@@ -16,15 +16,15 @@ namespace InventarioFarmacia
         public FormReporteProducto2()
         {
             InitializeComponent();
-            var _productoBL = new productosBL();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = _productoBL.ObtenerProducto();
+            var _productoBL = new productosBL();//Creamos la variable productosBL
+            var bindingSource = new BindingSource();//Enlasar Reportes bindingSource
+            bindingSource.DataSource = _productoBL.ObtenerProducto();//
 
-            var reporte = new ReporteProductos();
+            var reporte = new ReporteProductos();//Archivo que se creo que se diseno en Crystal Report
             reporte.SetDataSource(bindingSource);
 
             crystalReportViewer1.ReportSource = reporte;
-            crystalReportViewer1.RefreshReport();
+            crystalReportViewer1.RefreshReport();//Refresh genera el Reporte
         
     }
     }
