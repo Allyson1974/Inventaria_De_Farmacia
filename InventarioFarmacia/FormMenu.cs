@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.InventarioFarmacia;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,8 +54,12 @@ namespace InventarioFarmacia
         {
 
         }
-
         private void reporte1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -85,15 +90,27 @@ namespace InventarioFarmacia
         private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formFactura = new FormFactura();
-           // formFactura.MdiParent = this;
+            formFactura.MdiParent = this;// Propiedad para desplegar Pantalla dentro de un menu. se modifico la prop. IsMdiContainer = true
             formFactura.Show();
         }
 
-        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void reporte2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formReporteProductos = new FormReporteProductos();
+
+        }
+
+        private void reporteDeProductosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var formReporteProductos = new FormReporteProducto2();
             formReporteProductos.MdiParent = this;
             formReporteProductos.Show();
+        }
+
+        private void reporteDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var FormReporteFacturas = new FormReporteFacturas();
+            FormReporteFacturas.MdiParent = this;
+            FormReporteFacturas.Show();
         }
     }
 }

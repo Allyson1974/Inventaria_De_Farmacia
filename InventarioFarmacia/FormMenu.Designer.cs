@@ -36,14 +36,12 @@
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporte1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporte2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporte3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeProductosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,34 +102,26 @@
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reporte1ToolStripMenuItem,
-            this.reporte2ToolStripMenuItem,
-            this.reporte3ToolStripMenuItem,
-            this.reporteDeProductosToolStripMenuItem});
+            this.reporteDeProductosToolStripMenuItem1,
+            this.reporteDeFacturasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(102, 27);
             this.reportesToolStripMenuItem.Text = "Reportes";
-            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
+            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reporte1ToolStripMenuItem_Click);
             // 
-            // reporte1ToolStripMenuItem
+            // reporteDeProductosToolStripMenuItem1
             // 
-            this.reporte1ToolStripMenuItem.Name = "reporte1ToolStripMenuItem";
-            this.reporte1ToolStripMenuItem.Size = new System.Drawing.Size(279, 28);
-            this.reporte1ToolStripMenuItem.Text = "Reporte de Productos";
-            this.reporte1ToolStripMenuItem.Click += new System.EventHandler(this.reporte1ToolStripMenuItem_Click);
+            this.reporteDeProductosToolStripMenuItem1.Name = "reporteDeProductosToolStripMenuItem1";
+            this.reporteDeProductosToolStripMenuItem1.Size = new System.Drawing.Size(278, 28);
+            this.reporteDeProductosToolStripMenuItem1.Text = "Reporte de Productos";
+            this.reporteDeProductosToolStripMenuItem1.Click += new System.EventHandler(this.reporteDeProductosToolStripMenuItem1_Click);
             // 
-            // reporte2ToolStripMenuItem
+            // reporteDeFacturasToolStripMenuItem
             // 
-            this.reporte2ToolStripMenuItem.Name = "reporte2ToolStripMenuItem";
-            this.reporte2ToolStripMenuItem.Size = new System.Drawing.Size(279, 28);
-            this.reporte2ToolStripMenuItem.Text = "Reportes de Ingresos";
-            // 
-            // reporte3ToolStripMenuItem
-            // 
-            this.reporte3ToolStripMenuItem.Name = "reporte3ToolStripMenuItem";
-            this.reporte3ToolStripMenuItem.Size = new System.Drawing.Size(279, 28);
-            this.reporte3ToolStripMenuItem.Text = "Reporte de Inventario";
-            this.reporte3ToolStripMenuItem.Click += new System.EventHandler(this.reporte3ToolStripMenuItem_Click);
+            this.reporteDeFacturasToolStripMenuItem.Name = "reporteDeFacturasToolStripMenuItem";
+            this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(278, 28);
+            this.reporteDeFacturasToolStripMenuItem.Text = "Reporte de Facturas";
+            this.reporteDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeFacturasToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -158,15 +148,9 @@
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(152, 28);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(147, 28);
             this.perfilesToolStripMenuItem.Text = "Log out";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
-            // 
-            // reporteDeProductosToolStripMenuItem
-            // 
-            this.reporteDeProductosToolStripMenuItem.Name = "reporteDeProductosToolStripMenuItem";
-            this.reporteDeProductosToolStripMenuItem.Size = new System.Drawing.Size(279, 28);
-            this.reporteDeProductosToolStripMenuItem.Text = "Reporte de Gastos";
             // 
             // FormMenu
             // 
@@ -179,6 +163,7 @@
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Name = "FormMenu";
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -195,9 +180,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporte1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporte2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporte3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem perfilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
@@ -206,6 +188,7 @@
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDeProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeProductosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeFacturasToolStripMenuItem;
     }
 }

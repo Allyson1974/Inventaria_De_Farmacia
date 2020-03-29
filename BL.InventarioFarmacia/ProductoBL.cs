@@ -32,6 +32,11 @@ namespace BL.InventarioFarmacia
 
         }
 
+        internal object ObtenerProductos()
+        {
+            throw new NotImplementedException();
+        }
+
         public BindingList<Producto> BuscarProducto(string nombre)
         {
             var resultado = _contexto.Productos

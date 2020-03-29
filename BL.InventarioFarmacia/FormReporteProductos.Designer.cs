@@ -1,4 +1,4 @@
-﻿namespace InventarioFarmacia
+﻿namespace BL.InventarioFarmacia
 {
     partial class FormReporteProductos
     {
@@ -39,17 +39,17 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(850, 352);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(605, 338);
             this.crystalReportViewer1.TabIndex = 0;
             // 
             // FormReporteProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 352);
+            this.ClientSize = new System.Drawing.Size(605, 338);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "FormReporteProductos";
-            this.Text = "Reporte de  Productos";
+            this.Text = "Reporte de Productos";
             this.ResumeLayout(false);
 
         }
