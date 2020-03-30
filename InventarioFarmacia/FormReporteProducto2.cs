@@ -16,6 +16,7 @@ namespace InventarioFarmacia
         public FormReporteProducto2()
         {
             InitializeComponent();
+
             var _productoBL = new productosBL();//Creamos la variable productosBL
             var bindingSource = new BindingSource();//Enlasar Reportes bindingSource
             bindingSource.DataSource = _productoBL.ObtenerProducto();//
