@@ -33,11 +33,10 @@ namespace InventarioFarmacia
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter)
-              && !string.IsNullOrEmpty(textBox1.Text)
               && !string.IsNullOrEmpty(textBox2.Text))
 
             {
-                Autenticar();
+                button1.PerformClick();
             }
 
         }
@@ -136,6 +135,16 @@ namespace InventarioFarmacia
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBox2_KeyPress_1(object sender, KeyPressEventArgs e)
         {
 
         }
