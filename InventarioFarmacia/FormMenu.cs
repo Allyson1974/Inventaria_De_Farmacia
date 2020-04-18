@@ -112,5 +112,11 @@ namespace InventarioFarmacia
             FormReporteFacturas.MdiParent = this;
             FormReporteFacturas.Show();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var FormUsuario = new FormUsuario();
+            FormUsuario.ShowDialog();
+        }
     }
 }

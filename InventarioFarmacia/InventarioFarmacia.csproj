@@ -149,6 +149,12 @@
     <Compile Include="FormReporteProducto2.Designer.cs">
       <DependentUpon>FormReporteProducto2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductosBL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,6 +201,9 @@
     <EmbeddedResource Include="FormReporteProducto2.resx">
       <DependentUpon>FormReporteProducto2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -227,15 +236,24 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.Categoria.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.CategoriasBL.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.Cliente.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.ClienteBL+Cliente.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.ClienteBL.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.DatosdeInicio.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.Factura.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.FacturaBL.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.FacturaDetalle.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.FormReporteProductos.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.Producto.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.ProductoBL.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.productosBL.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.Proveedor.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.ProveedorBL.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.Resultado.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.SeguridadBL+Usurario.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.InventarioFarmacia.Tipo.datasource" />
     <None Include="Properties\DataSources\BL.InventarioFarmacia.TiposBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -24,7 +24,7 @@ namespace BL.InventarioFarmacia
 
         public DbSet<Producto> Productos { get; set; }//Cada una de estas 
         public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<Usurario> Usuarios { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Tipo> Tipos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Proveedor> Proveedor { get; set; }

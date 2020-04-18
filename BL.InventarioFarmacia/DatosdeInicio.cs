@@ -12,10 +12,10 @@ namespace BL.InventarioFarmacia
     {
         protected override void Seed(Contexto contexto)//Seed= es una semilla para inicialisar los datos en una bd.
         {
-            var usuarioAdmin = new Usurario();//se crea un usuario 
+            var usuarioAdmin = new Usuario();//se crea un usuario 
             usuarioAdmin.Nombre = "admin";    //se le crea un nombre
             usuarioAdmin.Contraseña = "123"; //y su contrasena y lo mismo se hace con categoria.
-
+            usuarioAdmin.TipoUsuario = "Administradores";
             contexto.Usuarios.Add(usuarioAdmin);
 
             var categoria1 = new Categoria();//llama a la descripcion y nos dara un mensaje
