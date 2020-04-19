@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,7 +55,24 @@ namespace BL.InventarioFarmacia
             tipo4.Descripcion = "Humanos"; // personal de la farmacia
             contexto.Tipos.Add(tipo4);
 
-            
+            var archivo = " ../../cliente.csv ";
+            using (var  reader = new StreamReader(archivo))
+            {
+                reader.ReadLine(); // Lee primera fila de encabezados
+
+                while (!reader.EndOfStream)
+                {
+                    var linea = reader.ReadLine();
+                    var valores = linea.Split(',');
+
+                    var clienteNuevo = new Cliente();
+                    clienteNuevo.Nombre = valores[0].ToString();
+                    clienteNuevo.Activo = bool.Parse(valores[1].ToString());
+
+                    contexto.Clientes.Add(clienteNuevo);
+                }
+            }
+
             base.Seed(contexto);//Con la instruccion "base.Seed" se embia a la b.d. y se crean los datos de prueba
 
         }

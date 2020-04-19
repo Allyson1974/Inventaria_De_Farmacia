@@ -83,6 +83,29 @@ namespace InventarioFarmacia
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var buscar = textBox2.Text;
+
+            if (string.IsNullOrEmpty(buscar) == true)
+            {
+                listadeClientesBindingSource.DataSource =
+                    _clientes.ObtenerCliente();
+            }
+            else
+            {
+                listadeClientesBindingSource.DataSource = _clientes.ObtenerCliente(buscar);
+            }
+
+
+            listadeClientesBindingSource.ResetBindings(false);
+        }
+
+        private void disponibleCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
     

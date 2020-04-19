@@ -36,7 +36,7 @@ namespace InventarioFarmacia
 
         }
 
-     /*    private void Autenticar()
+        /*private void Autenticar()
         {
 
 
@@ -70,8 +70,8 @@ namespace InventarioFarmacia
             {
                 MessageBox.Show("Usuario o Contrasena incorrecta");
             }
-        }
-        */
+        }*/
+        
         private void button1_Click(object sender, EventArgs e)
         {
 

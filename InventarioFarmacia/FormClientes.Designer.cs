@@ -36,8 +36,7 @@
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label rtnLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            System.Windows.Forms.Label disponibleLabel;
             this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listadeClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -65,12 +64,16 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.disponibleCheckBox = new System.Windows.Forms.CheckBox();
             apellidoLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             rtnLabel = new System.Windows.Forms.Label();
+            disponibleLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingNavigator)).BeginInit();
             this.listadeClientesBindingNavigator.SuspendLayout();
@@ -137,23 +140,6 @@
             rtnLabel.TabIndex = 65;
             rtnLabel.Text = "Rtn:";
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.Location = new System.Drawing.Point(12, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 20);
-            this.textBox1.TabIndex = 54;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(282, 187);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 23);
-            this.button4.TabIndex = 53;
-            this.button4.Text = "Buscar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // listadeClientesBindingSource
             // 
             this.listadeClientesBindingSource.DataSource = typeof(BL.InventarioFarmacia.Cliente);
@@ -184,7 +170,7 @@
             this.listadeClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listadeClientesBindingNavigator.Name = "listadeClientesBindingNavigator";
             this.listadeClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(734, 25);
+            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(687, 25);
             this.listadeClientesBindingNavigator.TabIndex = 55;
             this.listadeClientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -342,7 +328,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.listadeClientesDataGridView.DataSource = this.listadeClientesBindingSource;
-            this.listadeClientesDataGridView.Location = new System.Drawing.Point(22, 218);
+            this.listadeClientesDataGridView.Location = new System.Drawing.Point(11, 223);
             this.listadeClientesDataGridView.Name = "listadeClientesDataGridView";
             this.listadeClientesDataGridView.Size = new System.Drawing.Size(637, 220);
             this.listadeClientesDataGridView.TabIndex = 66;
@@ -383,11 +369,51 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Correo";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(603, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 67;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(427, 23);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(160, 20);
+            this.textBox2.TabIndex = 68;
+            // 
+            // disponibleLabel
+            // 
+            disponibleLabel.AutoSize = true;
+            disponibleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            disponibleLabel.Location = new System.Drawing.Point(8, 192);
+            disponibleLabel.Name = "disponibleLabel";
+            disponibleLabel.Size = new System.Drawing.Size(89, 16);
+            disponibleLabel.TabIndex = 69;
+            disponibleLabel.Text = "Disponible:";
+            // 
+            // disponibleCheckBox
+            // 
+            this.disponibleCheckBox.Location = new System.Drawing.Point(123, 189);
+            this.disponibleCheckBox.Name = "disponibleCheckBox";
+            this.disponibleCheckBox.Size = new System.Drawing.Size(36, 24);
+            this.disponibleCheckBox.TabIndex = 70;
+            this.disponibleCheckBox.UseVisualStyleBackColor = true;
+            this.disponibleCheckBox.CheckedChanged += new System.EventHandler(this.disponibleCheckBox_CheckedChanged);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 488);
+            this.ClientSize = new System.Drawing.Size(687, 450);
+            this.Controls.Add(disponibleLabel);
+            this.Controls.Add(this.disponibleCheckBox);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listadeClientesDataGridView);
             this.Controls.Add(apellidoLabel);
             this.Controls.Add(this.apellidoTextBox);
@@ -402,8 +428,6 @@
             this.Controls.Add(rtnLabel);
             this.Controls.Add(this.rtnTextBox);
             this.Controls.Add(this.listadeClientesBindingNavigator);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
             this.Name = "FormClientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);
@@ -419,8 +443,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.BindingSource listadeClientesBindingSource;
         private System.Windows.Forms.BindingNavigator listadeClientesBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -448,6 +470,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox disponibleCheckBox;
     }
 }
 

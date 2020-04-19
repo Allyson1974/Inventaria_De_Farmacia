@@ -32,6 +32,18 @@ namespace BL.InventarioFarmacia
 
         }
 
+        public BindingList<Producto> ObtenerProducto(string buscar)
+        {
+            var query = _contexto.Productos
+               .Where(p => p.Descripcion.ToLower()
+                .Contains(buscar.ToLower()) == true)
+                       .ToList();
+
+            var resultado = new BindingList<Producto>(query);
+
+            return resultado;
+        }
+
         internal object ObtenerProductos()
         {
             throw new NotImplementedException();

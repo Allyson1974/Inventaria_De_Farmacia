@@ -23,10 +23,27 @@ public  class ClienteBL
         }
         public BindingList<Cliente> ObtenerClientes()
         {
-            _contexto.Clientes.Load();
-            ListadeClientes = _contexto.Clientes.Local.ToBindingList();
+            //   _contexto.Clientes.Load();
+            //   ListadeClientes = _contexto.Clientes.Local.ToBindingList();
+
+            ListadeClientes = new  BindingList<Cliente>(
+                 _contexto.Clientes.OrderBy(o => o.Nombre).ToList()
+             );
+
 
             return ListadeClientes;
+        }
+
+        public BindingList<Cliente> ObtenerCliente(string buscar)
+        {
+            var query = _contexto.Clientes
+               .Where(p => p.Nombre.ToLower()
+                .Contains(buscar.ToLower()) == true)
+                       .ToList();
+
+            var resultado = new BindingList<Cliente>(query);
+
+            return resultado;
         }
 
         public void CancelarCambios()
@@ -113,7 +130,12 @@ public  class ClienteBL
         public string Apellido { get; set; }
         public string Direccion { get; set; }
         public string Correo { get; set; }
+        public bool Activo { get; set; }
 
+        public Cliente()
+        {
+            Activo = true;
+        }
 
     }
 

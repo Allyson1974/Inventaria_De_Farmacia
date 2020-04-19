@@ -34,8 +34,52 @@ namespace InventarioFarmacia
                 toolStripStatusLabel1.Text = " Usuario: "
                     + Program.UsuarioLogueado.Nombre;
 
+                if (Program.UsuarioLogueado.TipoUsuario == " Usuarios Caja ")
+                {
+                    productoToolStripMenuItem1.Visible = false;
+                    clientesToolStripMenuItem1.Visible = false;
+                    facturaToolStripMenuItem.Visible = true;
+                    usuariosToolStripMenuItem.Visible = false;
+                    reporteDeProductosToolStripMenuItem1.Visible = false;
+                    reporteDeFacturasToolStripMenuItem.Visible = true;
+                    generarFacturaToolStripMenuItem.Visible = true;
+                    perfilesToolStripMenuItem.Visible = false;
+                }
+
+                if (Program.UsuarioLogueado.TipoUsuario == " Usuarios Ventas ")
+                {
+                    productoToolStripMenuItem1.Visible = false;
+                    clientesToolStripMenuItem1.Visible = true;
+                    facturaToolStripMenuItem.Visible = true;
+                    usuariosToolStripMenuItem.Visible = false;
+                    reporteDeProductosToolStripMenuItem1.Visible = false;
+                    reporteDeFacturasToolStripMenuItem.Visible = false;
+                    generarFacturaToolStripMenuItem.Visible = true;
+                    perfilesToolStripMenuItem.Visible = false;
+                }
+
+                if (Program.UsuarioLogueado.TipoUsuario == " Administradores ")
+                {
+                    productoToolStripMenuItem1.Visible = true;
+                    clientesToolStripMenuItem1.Visible = true;
+                    facturaToolStripMenuItem.Visible = true;
+                    usuariosToolStripMenuItem.Visible = true;
+                    reporteDeProductosToolStripMenuItem1.Visible = true;
+                    reporteDeFacturasToolStripMenuItem.Visible = true;
+                    generarFacturaToolStripMenuItem.Visible = true;
+                    perfilesToolStripMenuItem.Visible = true;
+                }
+
+            }
+            else
+            {
+                Application.Exit();
             }
         }
+
+        
+    
+        
 
         private void ingresoSalidaDeMedicamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -60,7 +104,8 @@ namespace InventarioFarmacia
 
         private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var FormLogin = new FormLogin();
+            FormLogin.ShowDialog();
         }
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
