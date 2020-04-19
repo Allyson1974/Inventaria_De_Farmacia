@@ -167,7 +167,7 @@
             // 
             // listaProveedoresBindingSource
             // 
-            this.listaProveedoresBindingSource.DataSource = typeof(BL.InventarioFarmacia.Proveedor);
+          //  this.listaProveedoresBindingSource.DataSource = typeof(BL.InventarioFarmacia.Proveedor);
             // 
             // bindingNavigatorCountItem
             // 

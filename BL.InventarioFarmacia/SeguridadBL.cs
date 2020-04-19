@@ -106,7 +106,7 @@ namespace BL.InventarioFarmacia
             return resultado;
         }
 
-        public bool Autorizar(string usuario1, string contraseña1)
+        public Usuario Autorizar(string nombreUsuario, string contraseña1)
 
         {
             var usuario = _contexto.Usuarios.ToList();//traiga a la lista todos los usuarios estara preguntado a todos los usuarios
@@ -114,13 +114,13 @@ namespace BL.InventarioFarmacia
             foreach (var usuarioDB in usuario)
 
             {
-                if (usuario1 == usuarioDB.Nombre && contraseña1 == usuarioDB.Contraseña)
+                if (nombreUsuario == usuarioDB.Nombre && contraseña1 == usuarioDB.Contraseña)
                 {
-                    return true;
+                    return usuarioDB;
                 }
             }
 
-            return false;
+            return null;
         }
 
         public class Resultado

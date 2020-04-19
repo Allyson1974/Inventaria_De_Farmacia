@@ -24,6 +24,19 @@ namespace InventarioFarmacia
             formlogin.ShowDialog();
         }
 
+        private void Login()
+        {
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();
+
+            if (Program.UsuarioLogueado != null)
+            {
+                toolStripStatusLabel1.Text = " Usuario: "
+                    + Program.UsuarioLogueado.Nombre;
+
+            }
+        }
+
         private void ingresoSalidaDeMedicamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

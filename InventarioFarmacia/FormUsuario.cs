@@ -20,8 +20,7 @@ namespace InventarioFarmacia
 
             _seguridadBL = new SeguridadBL();
 
-            seguridadBL_UsurarioBindingSource.DataSource =
-                _seguridadBL.ObtenerUsuarios();
+            seguridadBL_UsurarioBindingSource.DataSource = _seguridadBL.ObtenerUsuarios();
         }
 
         private void seguridadBL_UsurarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 namespace BL.InventarioFarmacia
 {
     
-}
 
-public class Usuario
+
+    public class Usuarios
     {  //propiedades para el Usuario
         public int Id { get; set; }
         public string Nombre { get; set; }

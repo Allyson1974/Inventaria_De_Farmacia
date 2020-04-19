@@ -171,7 +171,7 @@
             // 
             // seguridadBL_UsurarioBindingSource
             // 
-            this.seguridadBL_UsurarioBindingSource.DataSource = typeof(BL.InventarioFarmacia.SeguridadBL.Usurario);
+            this.seguridadBL_UsurarioBindingSource.DataSource = typeof(BL.InventarioFarmacia.Usuario);
             // 
             // bindingNavigatorAddNewItem
             // 
