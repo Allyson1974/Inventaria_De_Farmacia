@@ -22,31 +22,40 @@ namespace InventarioFarmacia
         {
             var formlogin = new FormLogin();
             formlogin.ShowDialog();
+            Login();
         }
 
         private void Login()
         {
-            var formLogin = new FormLogin();
-            formLogin.ShowDialog();
+   //         var formLogin = new FormLogin();
+    //        formLogin.ShowDialog();
 
             if (Program.UsuarioLogueado != null)
             {
                 toolStripStatusLabel1.Text = " Usuario: "
                     + Program.UsuarioLogueado.Nombre;
 
-                if (Program.UsuarioLogueado.TipoUsuario == " Usuarios Caja ")
+                // por default todos las pantallas deben estar deshabilitado
+                productoToolStripMenuItem1.Visible = false;
+                clientesToolStripMenuItem1.Visible = false;
+                facturaToolStripMenuItem.Visible = false;
+                usuariosToolStripMenuItem.Visible = false;
+                reporteDeProductosToolStripMenuItem1.Visible = false;
+                reporteDeFacturasToolStripMenuItem.Visible = false;
+                generarFacturaToolStripMenuItem.Visible = false;
+                perfilesToolStripMenuItem.Visible = false;
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Caja")
                 {
-                    productoToolStripMenuItem1.Visible = false;
-                    clientesToolStripMenuItem1.Visible = false;
+                   
                     facturaToolStripMenuItem.Visible = true;
-                    usuariosToolStripMenuItem.Visible = false;
-                    reporteDeProductosToolStripMenuItem1.Visible = false;
+                    
                     reporteDeFacturasToolStripMenuItem.Visible = true;
                     generarFacturaToolStripMenuItem.Visible = true;
-                    perfilesToolStripMenuItem.Visible = false;
+                    perfilesToolStripMenuItem.Visible = true;
                 }
 
-                if (Program.UsuarioLogueado.TipoUsuario == " Usuarios Ventas ")
+                if (Program.UsuarioLogueado.TipoUsuario == "Ventas")
                 {
                     productoToolStripMenuItem1.Visible = false;
                     clientesToolStripMenuItem1.Visible = true;
@@ -55,10 +64,10 @@ namespace InventarioFarmacia
                     reporteDeProductosToolStripMenuItem1.Visible = false;
                     reporteDeFacturasToolStripMenuItem.Visible = false;
                     generarFacturaToolStripMenuItem.Visible = true;
-                    perfilesToolStripMenuItem.Visible = false;
+                    perfilesToolStripMenuItem.Visible = true;
                 }
 
-                if (Program.UsuarioLogueado.TipoUsuario == " Administradores ")
+                if (Program.UsuarioLogueado.TipoUsuario == "Administradores")
                 {
                     productoToolStripMenuItem1.Visible = true;
                     clientesToolStripMenuItem1.Visible = true;
@@ -106,6 +115,7 @@ namespace InventarioFarmacia
         {
             var FormLogin = new FormLogin();
             FormLogin.ShowDialog();
+            Login();
         }
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)

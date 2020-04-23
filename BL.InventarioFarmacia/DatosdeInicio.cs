@@ -19,6 +19,18 @@ namespace BL.InventarioFarmacia
             usuarioAdmin.TipoUsuario = "Administradores";
             contexto.Usuarios.Add(usuarioAdmin);
 
+            var usuarioCaja = new Usuario();//se crea un usuario 
+            usuarioCaja.Nombre = "caja";    //se le crea un nombre
+            usuarioCaja.Contraseña = "456"; //y su contrasena y lo mismo se hace con categoria.
+            usuarioCaja.TipoUsuario = "Caja";
+            contexto.Usuarios.Add(usuarioCaja);
+
+            var usuarioVentas = new Usuario();//se crea un usuario 
+            usuarioVentas.Nombre = "ventas";    //se le crea un nombre
+            usuarioVentas.Contraseña = "789"; //y su contrasena y lo mismo se hace con categoria.
+            usuarioVentas.TipoUsuario = "Ventas";
+            contexto.Usuarios.Add(usuarioVentas);
+
             var categoria1 = new Categoria();//llama a la descripcion y nos dara un mensaje
             categoria1.Descripcion = "Infantil y Adulto";
             contexto.Categorias.Add(categoria1);
@@ -55,7 +67,9 @@ namespace BL.InventarioFarmacia
             tipo4.Descripcion = "Humanos"; // personal de la farmacia
             contexto.Tipos.Add(tipo4);
 
-            var archivo = " ../../cliente.csv ";
+            string path = Directory.GetCurrentDirectory();
+
+            var archivo = "../../../clientes.csv";
             using (var  reader = new StreamReader(archivo))
             {
                 reader.ReadLine(); // Lee primera fila de encabezados

@@ -77,10 +77,10 @@ namespace InventarioFarmacia
 
 
             string usuario1;       //declaracion de variables usuarios
-            string contraseña1; //declaracion de variables contraseñas
+            string contrasenia1; //declaracion de variables contraseñas
 
             usuario1 = textBox1.Text;        //la variable usuario1 sera igual a lo que escriba en el tex
-            contraseña1 = textBox2.Text;
+            contrasenia1 = textBox2.Text;
 
             button1.Enabled = false;
             button1.Text = "Verficando";
@@ -88,7 +88,7 @@ namespace InventarioFarmacia
 
             //if (usuario1 == "admin" && contrasena1 == "123")
 
-            var usuarioDB = _seguridad.Autorizar(usuario1, contraseña1);
+            var usuarioDB = _seguridad.Autorizar(usuario1, contrasenia1);
             //   var resultado = _seguridad.Autorizar(usuario1, contraseña1);
 
             if (usuarioDB != null)
