@@ -36,7 +36,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario));
             this.seguridadBL_UsurarioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.seguridadBL_UsurarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -50,22 +49,22 @@
             this.seguridadBL_UsurarioBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.seguridadBL_UsurarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseñaTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.tipoUsuarioComboBox = new System.Windows.Forms.ComboBox();
+            this.seguridadBL_UsurarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             contraseñaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             tipoUsuarioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBL_UsurarioBindingNavigator)).BeginInit();
             this.seguridadBL_UsurarioBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.seguridadBL_UsurarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBL_UsurarioDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguridadBL_UsurarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // contraseñaLabel
@@ -144,10 +143,6 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
-            // seguridadBL_UsurarioBindingSource
-            // 
-            this.seguridadBL_UsurarioBindingSource.DataSource = typeof(BL.InventarioFarmacia.Usuario);
             // 
             // bindingNavigatorCountItem
             // 
@@ -253,37 +248,12 @@
             this.seguridadBL_UsurarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.seguridadBL_UsurarioDataGridView.DataSource = this.seguridadBL_UsurarioBindingSource;
             this.seguridadBL_UsurarioDataGridView.Location = new System.Drawing.Point(15, 178);
             this.seguridadBL_UsurarioDataGridView.Name = "seguridadBL_UsurarioDataGridView";
             this.seguridadBL_UsurarioDataGridView.Size = new System.Drawing.Size(434, 220);
             this.seguridadBL_UsurarioDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Contraseña";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Contraseña";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "TipoUsuario";
-            this.dataGridViewTextBoxColumn4.HeaderText = "TipoUsuario";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // contraseñaTextBox
             // 
@@ -323,10 +293,34 @@
             this.tipoUsuarioComboBox.Size = new System.Drawing.Size(196, 21);
             this.tipoUsuarioComboBox.TabIndex = 9;
             // 
+            // seguridadBL_UsurarioBindingSource
+            // 
+            this.seguridadBL_UsurarioBindingSource.DataSource = typeof(BL.InventarioFarmacia.Usuario);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "TipoUsuario";
+            this.dataGridViewTextBoxColumn4.HeaderText = "TipoUsuario";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(467, 430);
             this.Controls.Add(tipoUsuarioLabel);
             this.Controls.Add(this.tipoUsuarioComboBox);
@@ -343,8 +337,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBL_UsurarioBindingNavigator)).EndInit();
             this.seguridadBL_UsurarioBindingNavigator.ResumeLayout(false);
             this.seguridadBL_UsurarioBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.seguridadBL_UsurarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBL_UsurarioDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguridadBL_UsurarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

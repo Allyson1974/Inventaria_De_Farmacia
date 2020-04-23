@@ -81,7 +81,11 @@ namespace BL.InventarioFarmacia
 
                     var clienteNuevo = new Cliente();
                     clienteNuevo.Nombre = valores[0].ToString();
-                    clienteNuevo.Activo = bool.Parse(valores[1].ToString());
+                    clienteNuevo.Apellido = valores[1].ToString();
+                    clienteNuevo.Correo = valores[2].ToString();
+                    clienteNuevo.Direccion = valores[3].ToString();
+                    clienteNuevo.Rtn = valores[4].ToString();
+                    //clienteNuevo.Activo = bool.Parse(valores[5].ToString());
 
                     contexto.Clientes.Add(clienteNuevo);
                 }
