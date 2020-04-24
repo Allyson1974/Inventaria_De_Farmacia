@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace BL.InventarioFarmacia
 {
-    public  class DatosdeInicio : CreateDatabaseIfNotExists<Contexto>//Datos de inicio creera la bd si no existe no me los volvera a pedir mi bd
+    public class DatosdeInicio : CreateDatabaseIfNotExists<Contexto>//Datos de inicio creera la bd si no existe no me los volvera a pedir mi bd
 
     {
-        protected override void Seed(Contexto contexto)//Seed= es una semilla para inicialisar los datos en una bd.
+        protected override void Seed(Contexto contexto)//Seed= es una semilla para inicializar los datos en una bd.
         {
             var usuarioAdmin = new Usuario();//se crea un usuario 
             usuarioAdmin.Nombre = "admin";    //se le crea un nombre
@@ -70,7 +70,7 @@ namespace BL.InventarioFarmacia
             string path = Directory.GetCurrentDirectory();
 
             var archivo = "../../../clientes.csv";
-            using (var  reader = new StreamReader(archivo))
+            using (var reader = new StreamReader(archivo))
             {
                 reader.ReadLine(); // Lee primera fila de encabezados
 
@@ -89,8 +89,10 @@ namespace BL.InventarioFarmacia
 
                     contexto.Clientes.Add(clienteNuevo);
                 }
-            }
-
+            
+              }
+            
+                    
             base.Seed(contexto);//Con la instruccion "base.Seed" se embia a la b.d. y se crean los datos de prueba
 
         }

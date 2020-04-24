@@ -1,31 +1,31 @@
-Medicamento,Descripcion,Precio,Litera,Existencia
-Loratadina,Loratadina en Jarabe,100,L,50
-Loratadina,Loratadina en Tableta,5,L,50
-Difenhidramina,Difenhidramina en Jarabe,150,D,50
-Difenhidramina,Difenhidramina en Capsula,10,D,50
-Acetaminofen,Acetaminofen en Tableta,5,A,25
-Acetaminofen,Acetaminofen en Jarabe,5,A,25
-Acetaminofen,Acetaminofen en Supositorio,5,A,25
-Alcanfor,Alcanfor en Unguento,15,A,30
-Acido Acetilsalicilico,Acido Acetilsalicilico en Tableta,50,A,30
-Acido Folico,Acido Folico en Tableta,25,A,100
-Ambroxol,Ambroxol en Capsula,15,A,50
-Ambroxol,Ambroxol en Jarabe,15,A,50
-Dextometrofano,Dextometrofano en Jarabe,50,D,30
-Salbutamol,Salbutamol en Areosol,80,S,20
-Ibuprofeno,Ibuprofeno en Tableta,5,I,50
-Ibuprofeno,Ibuprofeno en Jarabe,45,I,50
-Albendazol,Albendazol en Tabletas,10,A,100
-Vitamina C,Vitamina C en Tableta,50,V,100
-Diclofenaco,Diclofenaco en Tableta,6,D,100
-Diclofenaco,Diclofenaco en Jarabe,65,D,50
-Dimenhidrinato,Dimenhidrinato en Tabletas,5,D,50
-Ranitidina,Ranitidina en Tabletas,15,R,25
-Ranitidina,Ranitidina en Inyeccion,45,R,25
-Trimetose,Trimetose en Jarabe,150,T,15
-Panadol,Panadol en Tabletas,4,P,100
-Gripex,Gripex en Capsula,12,G,50
-Gripex,Gripex en Tableta,8,G,50
-Gripex,Gripex en Jarabe,55,G,50
-Pasta Dental,Pasta Dental,30,P,25
-Hilo Dental,Hilo Dental,10,H,25
+Medicamento,Descripcion,Precio,Litera,Existencia,Categoriaid
+Loratadina,Loratadina en Jarabe,100,L,50,1
+Loratadina,Loratadina en Tableta,5,L,50,2
+Difenhidramina,Difenhidramina en Jarabe,150,D,50,3
+Difenhidramina,Difenhidramina en Capsula,10,D,50,4
+Acetaminofen,Acetaminofen en Tableta,5,A,25,5
+Acetaminofen,Acetaminofen en Jarabe,5,A,25,6
+Acetaminofen,Acetaminofen en Supositorio,5,A,25,7
+Alcanfor,Alcanfor en Unguento,15,A,30,8
+Acido Acetilsalicilico,Acido Acetilsalicilico en Tableta,50,A,30,9
+Acido Folico,Acido Folico en Tableta,25,A,100,10
+Ambroxol,Ambroxol en Capsula,15,A,50,11
+Ambroxol,Ambroxol en Jarabe,15,A,50,12
+Dextometrofano,Dextometrofano en Jarabe,50,D,30,13
+Salbutamol,Salbutamol en Areosol,80,S,20,14
+Ibuprofeno,Ibuprofeno en Tableta,5,I,50,15
+Ibuprofeno,Ibuprofeno en Jarabe,45,I,50,16
+Albendazol,Albendazol en Tabletas,10,A,100,17
+Vitamina C,Vitamina C en Tableta,50,V,100,18
+Diclofenaco,Diclofenaco en Tableta,6,D,100,19
+Diclofenaco,Diclofenaco en Jarabe,65,D,50,20
+Dimenhidrinato,Dimenhidrinato en Tabletas,5,D,50,21
+Ranitidina,Ranitidina en Tabletas,15,R,25,22
+Ranitidina,Ranitidina en Inyeccion,45,R,25,23
+Trimetose,Trimetose en Jarabe,150,T,15,24
+Panadol,Panadol en Tabletas,4,P,100,25
+Gripex,Gripex en Capsula,12,G,50,26
+Gripex,Gripex en Tableta,8,G,50,27
+Gripex,Gripex en Jarabe,55,G,50,28
+Pasta Dental,Pasta Dental,30,P,25,29
+Hilo Dental,Hilo Dental,10,H,25,30

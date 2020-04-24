@@ -112,13 +112,7 @@ namespace InventarioFarmacia
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            listaProductosBindingSource.DataSource = _productos.BuscarProducto(textBox1.Text);
-
-            listaProductosBindingSource.ResetBindings(false);
-        }
-
+        
         private void idTextBox_TextChanged(object sender, EventArgs e)
         {
 

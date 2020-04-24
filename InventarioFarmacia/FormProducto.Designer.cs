@@ -71,8 +71,6 @@
             this.medicamentoTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -177,7 +175,7 @@
             // fotoLabel
             // 
             fotoLabel.AutoSize = true;
-            fotoLabel.Location = new System.Drawing.Point(458, 61);
+            fotoLabel.Location = new System.Drawing.Point(416, 61);
             fotoLabel.Name = "fotoLabel";
             fotoLabel.Size = new System.Drawing.Size(31, 13);
             fotoLabel.TabIndex = 65;
@@ -231,7 +229,7 @@
             this.listaProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaProductosBindingNavigator.Name = "listaProductosBindingNavigator";
             this.listaProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(779, 25);
+            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(723, 25);
             this.listaProductosBindingNavigator.TabIndex = 0;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -364,9 +362,9 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewCheckBoxColumn1});
             this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
-            this.listaProductosDataGridView.Location = new System.Drawing.Point(15, 337);
+            this.listaProductosDataGridView.Location = new System.Drawing.Point(15, 290);
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
-            this.listaProductosDataGridView.Size = new System.Drawing.Size(752, 246);
+            this.listaProductosDataGridView.Size = new System.Drawing.Size(671, 246);
             this.listaProductosDataGridView.TabIndex = 1;
             this.listaProductosDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaProductosDataGridView_CellValueChanged);
             // 
@@ -486,30 +484,11 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 51;
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.Location = new System.Drawing.Point(15, 279);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 20);
-            this.textBox1.TabIndex = 49;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(273, 277);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 23);
-            this.button4.TabIndex = 48;
-            this.button4.Text = "Buscar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // fotoPictureBox
             // 
             this.fotoPictureBox.BackColor = System.Drawing.Color.Silver;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaProductosBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fotoPictureBox.Location = new System.Drawing.Point(470, 49);
+            this.fotoPictureBox.Location = new System.Drawing.Point(428, 52);
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.Size = new System.Drawing.Size(275, 153);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -518,7 +497,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(528, 214);
+            this.button1.Location = new System.Drawing.Point(486, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 23);
             this.button1.TabIndex = 67;
@@ -528,7 +507,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(649, 213);
+            this.button2.Location = new System.Drawing.Point(607, 214);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 23);
             this.button2.TabIndex = 68;
@@ -578,14 +557,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(470, 19);
+            this.textBox2.Location = new System.Drawing.Point(428, 28);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(194, 20);
             this.textBox2.TabIndex = 72;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(670, 17);
+            this.button3.Location = new System.Drawing.Point(628, 26);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 73;
@@ -598,7 +577,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(779, 749);
+            this.ClientSize = new System.Drawing.Size(723, 749);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(descripcionLabel1);
@@ -624,8 +603,6 @@
             this.Controls.Add(precioLabel);
             this.Controls.Add(this.precioTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.listaProductosDataGridView);
             this.Controls.Add(this.listaProductosBindingNavigator);
             this.Name = "FormProducto";
@@ -676,8 +653,6 @@
         private System.Windows.Forms.TextBox medicamentoTextBox;
         private System.Windows.Forms.TextBox precioTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.Button button1;

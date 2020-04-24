@@ -60,13 +60,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.disponibleCheckBox = new System.Windows.Forms.CheckBox();
-            this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidoLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
@@ -366,10 +366,6 @@
             this.disponibleCheckBox.UseVisualStyleBackColor = true;
             this.disponibleCheckBox.CheckedChanged += new System.EventHandler(this.disponibleCheckBox_CheckedChanged);
             // 
-            // listadeClientesBindingSource
-            // 
-            this.listadeClientesBindingSource.DataSource = typeof(BL.InventarioFarmacia.Cliente);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -412,11 +408,15 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 49;
             // 
+            // listadeClientesBindingSource
+            // 
+            this.listadeClientesBindingSource.DataSource = typeof(BL.InventarioFarmacia.Cliente);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lime;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(719, 450);
             this.Controls.Add(disponibleLabel);
             this.Controls.Add(this.disponibleCheckBox);
