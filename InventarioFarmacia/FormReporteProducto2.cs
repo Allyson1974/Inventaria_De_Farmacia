@@ -22,7 +22,7 @@ namespace InventarioFarmacia
             var _tiposBL = new TiposBL();
 
             var bindingSource1 = new BindingSource();
-            bindingSource1.DataSource = _productoBL.ObtenerProductos();
+            bindingSource1.DataSource = _productoBL.ObtenerProducto();
 
             var bindingSource2 = new BindingSource();
             bindingSource2.DataSource = _categoriasBL.ObtenerCategorias();
@@ -31,9 +31,9 @@ namespace InventarioFarmacia
             bindingSource3.DataSource = _tiposBL.ObtenerTipos();
 
             var reporte = new ReporteProductos();
-            reporte.Database.Tables[" Producto "].SetDataSource(bindingSource1);
-            reporte.Database.Tables[" Categoria "].SetDataSource(bindingSource2);
-            reporte.Database.Tables[" Tipo "].SetDataSource(bindingSource3);
+            reporte.Database.Tables["Producto"].SetDataSource(bindingSource1);
+            reporte.Database.Tables["Categoria"].SetDataSource(bindingSource2);
+            reporte.Database.Tables["Tipo"].SetDataSource(bindingSource3);
 
             
             crystalReportViewer1.ReportSource = reporte;
