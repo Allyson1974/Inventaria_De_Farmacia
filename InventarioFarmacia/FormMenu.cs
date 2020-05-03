@@ -186,5 +186,12 @@ namespace InventarioFarmacia
             var FormUsuario = new FormUsuario();
             FormUsuario.ShowDialog();
         }
+
+        private void generarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formFactura = new FormFactura();
+            formFactura.MdiParent = this;// Propiedad para desplegar Pantalla dentro de un menu. se modifico la prop. IsMdiContainer = true
+            formFactura.Show();
+        }
     }
 }

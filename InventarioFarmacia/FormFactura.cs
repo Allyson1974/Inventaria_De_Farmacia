@@ -201,6 +201,25 @@ namespace InventarioFarmacia
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listadeFacturasBindingSource.Current;
+
+            _facturasBL.AgregarFacturaDetalle(factura);
+
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listadeFacturasBindingSource.Current;
+            var facturaDetalle = (FacturaDetalle)facturaDetalleBindingSource.Current;
+
+            _facturasBL.RemoverFacturaDetalle(factura, facturaDetalle);
+
+            DeshabilitarHabilitarBotones(false);
+        }
     }
 
 }

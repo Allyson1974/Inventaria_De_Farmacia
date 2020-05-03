@@ -132,6 +132,7 @@
             this.generarFacturaToolStripMenuItem.Name = "generarFacturaToolStripMenuItem";
             this.generarFacturaToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
             this.generarFacturaToolStripMenuItem.Text = "Generar Factura";
+            this.generarFacturaToolStripMenuItem.Click += new System.EventHandler(this.generarFacturaToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 

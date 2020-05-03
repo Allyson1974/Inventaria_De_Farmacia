@@ -70,6 +70,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             activoLabel = new System.Windows.Forms.Label();
             clienteIdLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
@@ -84,6 +86,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaDetalleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaDetalleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -92,7 +96,7 @@
             activoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             activoLabel.Location = new System.Drawing.Point(248, 59);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(57, 16);
+            activoLabel.Size = new System.Drawing.Size(55, 16);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
@@ -102,7 +106,7 @@
             clienteIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             clienteIdLabel.Location = new System.Drawing.Point(24, 126);
             clienteIdLabel.Name = "clienteIdLabel";
-            clienteIdLabel.Size = new System.Drawing.Size(63, 16);
+            clienteIdLabel.Size = new System.Drawing.Size(60, 16);
             clienteIdLabel.TabIndex = 3;
             clienteIdLabel.Text = "Cliente:";
             // 
@@ -112,7 +116,7 @@
             fechaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaLabel.Location = new System.Drawing.Point(24, 92);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(57, 16);
+            fechaLabel.Size = new System.Drawing.Size(55, 16);
             fechaLabel.TabIndex = 5;
             fechaLabel.Text = "Fecha:";
             // 
@@ -122,7 +126,7 @@
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             idLabel.Location = new System.Drawing.Point(24, 59);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(27, 16);
+            idLabel.Size = new System.Drawing.Size(25, 16);
             idLabel.TabIndex = 7;
             idLabel.Text = "Id:";
             // 
@@ -132,7 +136,7 @@
             impuestoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             impuestoLabel.Location = new System.Drawing.Point(371, 439);
             impuestoLabel.Name = "impuestoLabel";
-            impuestoLabel.Size = new System.Drawing.Size(77, 16);
+            impuestoLabel.Size = new System.Drawing.Size(75, 16);
             impuestoLabel.TabIndex = 9;
             impuestoLabel.Text = "Impuesto:";
             // 
@@ -142,7 +146,7 @@
             subtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             subtotalLabel.Location = new System.Drawing.Point(371, 413);
             subtotalLabel.Name = "subtotalLabel";
-            subtotalLabel.Size = new System.Drawing.Size(71, 16);
+            subtotalLabel.Size = new System.Drawing.Size(69, 16);
             subtotalLabel.TabIndex = 11;
             subtotalLabel.Text = "Subtotal:";
             subtotalLabel.Click += new System.EventHandler(this.subtotalLabel_Click);
@@ -153,7 +157,7 @@
             totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             totalLabel.Location = new System.Drawing.Point(371, 465);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(49, 16);
+            totalLabel.Size = new System.Drawing.Size(48, 16);
             totalLabel.TabIndex = 13;
             totalLabel.Text = "Total:";
             // 
@@ -189,7 +193,7 @@
             this.listadeFacturasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listadeFacturasBindingNavigator.Name = "listadeFacturasBindingNavigator";
             this.listadeFacturasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listadeFacturasBindingNavigator.Size = new System.Drawing.Size(666, 25);
+            this.listadeFacturasBindingNavigator.Size = new System.Drawing.Size(668, 25);
             this.listadeFacturasBindingNavigator.TabIndex = 0;
             this.listadeFacturasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -440,7 +444,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(522, 123);
+            this.button1.Location = new System.Drawing.Point(715, 113);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 40);
             this.button1.TabIndex = 16;
@@ -451,7 +455,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(581, 123);
+            this.button2.Location = new System.Drawing.Point(774, 113);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(48, 40);
             this.button2.TabIndex = 16;
@@ -471,12 +475,36 @@
             this.label1.Text = "ANULADO";
             this.label1.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(419, 113);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(553, 113);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // FormFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(666, 487);
+            this.ClientSize = new System.Drawing.Size(668, 487);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -507,6 +535,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaDetalleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaDetalleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,5 +577,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -39,6 +39,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.listadeClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -57,16 +58,16 @@
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.rtnTextBox = new System.Windows.Forms.TextBox();
             this.listadeClientesDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.disponibleCheckBox = new System.Windows.Forms.CheckBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listadeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.disponibleCheckBox = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             apellidoLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
@@ -76,8 +77,9 @@
             disponibleLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingNavigator)).BeginInit();
             this.listadeClientesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // apellidoLabel
@@ -86,7 +88,7 @@
             apellidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             apellidoLabel.Location = new System.Drawing.Point(10, 82);
             apellidoLabel.Name = "apellidoLabel";
-            apellidoLabel.Size = new System.Drawing.Size(72, 16);
+            apellidoLabel.Size = new System.Drawing.Size(70, 16);
             apellidoLabel.TabIndex = 55;
             apellidoLabel.Text = "Apellido:";
             // 
@@ -96,7 +98,7 @@
             correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             correoLabel.Location = new System.Drawing.Point(10, 108);
             correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(62, 16);
+            correoLabel.Size = new System.Drawing.Size(59, 16);
             correoLabel.TabIndex = 57;
             correoLabel.Text = "Correo:";
             // 
@@ -106,7 +108,7 @@
             direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             direccionLabel.Location = new System.Drawing.Point(10, 134);
             direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(80, 16);
+            direccionLabel.Size = new System.Drawing.Size(78, 16);
             direccionLabel.TabIndex = 59;
             direccionLabel.Text = "Direccion:";
             // 
@@ -116,7 +118,7 @@
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             idLabel.Location = new System.Drawing.Point(10, 30);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(27, 16);
+            idLabel.Size = new System.Drawing.Size(25, 16);
             idLabel.TabIndex = 61;
             idLabel.Text = "Id:";
             // 
@@ -126,7 +128,7 @@
             nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nombreLabel.Location = new System.Drawing.Point(10, 56);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(69, 16);
+            nombreLabel.Size = new System.Drawing.Size(67, 16);
             nombreLabel.TabIndex = 63;
             nombreLabel.Text = "Nombre:";
             // 
@@ -136,7 +138,7 @@
             rtnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             rtnLabel.Location = new System.Drawing.Point(10, 160);
             rtnLabel.Name = "rtnLabel";
-            rtnLabel.Size = new System.Drawing.Size(37, 16);
+            rtnLabel.Size = new System.Drawing.Size(35, 16);
             rtnLabel.TabIndex = 65;
             rtnLabel.Text = "Rtn:";
             // 
@@ -146,7 +148,7 @@
             disponibleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             disponibleLabel.Location = new System.Drawing.Point(8, 192);
             disponibleLabel.Name = "disponibleLabel";
-            disponibleLabel.Size = new System.Drawing.Size(89, 16);
+            disponibleLabel.Size = new System.Drawing.Size(87, 16);
             disponibleLabel.TabIndex = 69;
             disponibleLabel.Text = "Disponible:";
             // 
@@ -176,7 +178,7 @@
             this.listadeClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listadeClientesBindingNavigator.Name = "listadeClientesBindingNavigator";
             this.listadeClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(719, 25);
+            this.listadeClientesBindingNavigator.Size = new System.Drawing.Size(717, 25);
             this.listadeClientesBindingNavigator.TabIndex = 55;
             this.listadeClientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -188,6 +190,10 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            // 
+            // listadeClientesBindingSource
+            // 
+            this.listadeClientesBindingSource.DataSource = typeof(BL.InventarioFarmacia.Cliente);
             // 
             // bindingNavigatorCountItem
             // 
@@ -340,32 +346,6 @@
             this.listadeClientesDataGridView.Size = new System.Drawing.Size(667, 220);
             this.listadeClientesDataGridView.TabIndex = 66;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(603, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 67;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(427, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 68;
-            // 
-            // disponibleCheckBox
-            // 
-            this.disponibleCheckBox.Location = new System.Drawing.Point(123, 189);
-            this.disponibleCheckBox.Name = "disponibleCheckBox";
-            this.disponibleCheckBox.Size = new System.Drawing.Size(36, 24);
-            this.disponibleCheckBox.TabIndex = 70;
-            this.disponibleCheckBox.UseVisualStyleBackColor = true;
-            this.disponibleCheckBox.CheckedChanged += new System.EventHandler(this.disponibleCheckBox_CheckedChanged);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -408,16 +388,51 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 49;
             // 
-            // listadeClientesBindingSource
+            // button1
             // 
-            this.listadeClientesBindingSource.DataSource = typeof(BL.InventarioFarmacia.Cliente);
+            this.button1.Location = new System.Drawing.Point(746, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 67;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(427, 28);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(160, 20);
+            this.textBox2.TabIndex = 68;
+            // 
+            // disponibleCheckBox
+            // 
+            this.disponibleCheckBox.Location = new System.Drawing.Point(123, 189);
+            this.disponibleCheckBox.Name = "disponibleCheckBox";
+            this.disponibleCheckBox.Size = new System.Drawing.Size(36, 24);
+            this.disponibleCheckBox.TabIndex = 70;
+            this.disponibleCheckBox.UseVisualStyleBackColor = true;
+            this.disponibleCheckBox.CheckedChanged += new System.EventHandler(this.disponibleCheckBox_CheckedChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(593, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(719, 450);
+            this.ClientSize = new System.Drawing.Size(717, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(disponibleLabel);
             this.Controls.Add(this.disponibleCheckBox);
             this.Controls.Add(this.textBox2);
@@ -442,8 +457,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingNavigator)).EndInit();
             this.listadeClientesBindingNavigator.ResumeLayout(false);
             this.listadeClientesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeClientesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,6 +497,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
