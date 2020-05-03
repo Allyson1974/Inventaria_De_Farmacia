@@ -38,7 +38,7 @@ namespace InventarioFarmacia
                 // por default todos las pantallas deben estar deshabilitado
                 productoToolStripMenuItem1.Visible = false;
                 clientesToolStripMenuItem1.Visible = false;
-                facturaToolStripMenuItem.Visible = false;
+              //  facturaToolStripMenuItem.Visible = false;
                 usuariosToolStripMenuItem.Visible = false;
                 reporteDeProductosToolStripMenuItem1.Visible = false;
                 reporteDeFacturasToolStripMenuItem.Visible = false;
@@ -59,7 +59,7 @@ namespace InventarioFarmacia
                 {
                     productoToolStripMenuItem1.Visible = false;
                     clientesToolStripMenuItem1.Visible = true;
-                    facturaToolStripMenuItem.Visible = true;
+                   // facturaToolStripMenuItem.Visible = true;
                     usuariosToolStripMenuItem.Visible = false;
                     reporteDeProductosToolStripMenuItem1.Visible = false;
                     reporteDeFacturasToolStripMenuItem.Visible = false;
@@ -71,7 +71,7 @@ namespace InventarioFarmacia
                 {
                     productoToolStripMenuItem1.Visible = true;
                     clientesToolStripMenuItem1.Visible = true;
-                    facturaToolStripMenuItem.Visible = true;
+                   // facturaToolStripMenuItem.Visible = true;
                     usuariosToolStripMenuItem.Visible = true;
                     reporteDeProductosToolStripMenuItem1.Visible = true;
                     reporteDeFacturasToolStripMenuItem.Visible = true;
