@@ -48,7 +48,7 @@ namespace InventarioFarmacia
                 if (Program.UsuarioLogueado.TipoUsuario == "Caja")
                 {
                    
-                    facturaToolStripMenuItem.Visible = true;
+                    //facturaToolStripMenuItem.Visible = true;
                     
                     reporteDeFacturasToolStripMenuItem.Visible = true;
                     generarFacturaToolStripMenuItem.Visible = true;
@@ -155,12 +155,12 @@ namespace InventarioFarmacia
             Clientes.ShowDialog();
         }
 
-        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        /*private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formFactura = new FormFactura();
             formFactura.MdiParent = this;// Propiedad para desplegar Pantalla dentro de un menu. se modifico la prop. IsMdiContainer = true
             formFactura.Show();
-        }
+        }*/
 
         private void reporte2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
